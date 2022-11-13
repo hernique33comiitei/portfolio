@@ -12,11 +12,11 @@
 </head>
 <body onload="mytext()" >
     
+    <div class="menu">
+        <img class="menu__image" src="icons/menu.png" alt="Icone menu">
+    </div>
     <div class="container">
-        <div class="container__menu">
-            <img src="icons/menu.png" alt="Icone menu">
-        </div>
-        <div class="container__divTexts">
+        <div class="container__divTexts" id="section--home">
             <div class="container__textInit">
                 <p class="container__textPorti">PORTFÓLIO</p>
                 <p class="container__textMyName">H</p>
@@ -36,7 +36,7 @@
 
         <!-- PARTE DAS HABILIDADES -->
 
-        <div class="container__habilidades">
+        <div class="container__habilidades" id="section--habilidades">
             <p class="container__textHabilitsPrincipal not--view">HABILIDADES</p>
             <div class="container__divComponent not--view">
                 <div class="container__component">
@@ -57,13 +57,13 @@
 
         <!-- PARTE DOS MEUS PROJETOS -->
 
-        <div class="container__projetos">
-            <p class="container__textProjetosPrincipal">PROJETOS</p>
-            <div class="container__divProjetos">
+        <div class="container__projetos" id="section--projetos" >
+            <p class="container__textProjetosPrincipal not--view">PROJETOS</p>
+            <div class="container__divProjetos not--view ">
                 
                 <div class="container__divProjetosOn">
-                    <div class="container__projeto"><a href="#"></a></div>
-                    <div class="container__projeto"><a href="#"></a></div>
+                    <div class="container__projeto pokeiou"><a href="https://pokeiou.netlify.app/" target="_blank"></a></div>
+                    <div class="container__projeto wildbeast"><a href="https://wildbeast-css-grid.web.app/" target="_blank"></a></div>
                     <div class="container__projeto"><a href="#"></a></div>
                 </div>
 
@@ -82,11 +82,11 @@
 
         <!-- CONFIGS PARA A DIV DE CONTATOS -->
 
-        <div class="container__divContatos">
-            <p class="container__textContatosPrincipal">Contatos</p> 
-            <div class="container__divItensContatos">
+        <div class="container__divContatos" id="section--contatos">
+            <p class="container__textContatosPrincipal not--view">Contatos</p> 
+            <div class="container__divItensContatos not--view">
                 
-                <div class="container__redesComponentes">
+                <div class="container__redesComponentes ">
                     <div class="container__divImgComponent">
                         <img src="icons/git-hub-icon.png" alt="Icon Git Hub">
                     </div>
@@ -124,6 +124,7 @@
     </div>
 
     <script src="js/index.js"></script>
+    <script src="js/menu.js"></script>
 
 </body>
 </html>

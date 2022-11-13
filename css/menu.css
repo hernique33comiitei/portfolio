@@ -1,16 +1,47 @@
-.container__menu {
+.menu {
+    transition: all .3s ease;
     position: fixed;
     top: 3%;
     left: 2%;
     cursor: pointer;
-    transition: all .3s ease;
+    z-index: 2;
 }
 
-.container__menu > img {
+.menu > img {
     width: 30px;
 }  
 
-.container__menu:hover {
+.menu:hover {
     transform: scale(1.2);
     opacity: 70%;
 }
+
+/* CONFIGS PARA O BORDAL */
+
+.bordal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0D0A0E54;
+}
+
+.bordal a {
+    transition: all .3s ease;
+    text-decoration: none;
+    color: var(--text-contatos);
+    font-weight: 600;
+    opacity: 70%;
+}
+
+.bordal a:hover {
+    opacity: 100%;
+    transform: scale(1.2);
+}
+
