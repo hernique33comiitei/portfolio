@@ -1,0 +1,16 @@
+.container__menu {
+    position: fixed;
+    top: 3%;
+    left: 2%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.container__menu > img {
+    width: 30px;
+}  
+
+.container__menu:hover {
+    transform: scale(1.2);
+    opacity: 70%;
+}

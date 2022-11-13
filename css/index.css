@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap');
+
+/* CONFIGS GERAIS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #0D0A0E;
+    --versio-blue: #8257E6;
+    --fundo2: #302C32;
+    --fundo3: #473A3A;
+    --text-contatos: #CCCCCC; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--fundo);
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* CONFIGS PARA O CONTAINER */
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "texts imgText"
+    "habilit habilit"
+    "projetos projetos"
+    "contatos contatos";
+    grid-template-columns: 80% 20%;
+    max-width: 1700px;
+}
+
+.container__divTexts {
+    grid-area: texts;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    height: 100vh;
+}
+
+.container__imagemFrontEnd {
+    grid-area: imgText;
+    background-image: url("../img/img-first-pagina.png");
+    background-position: right center;
+    background-size: contain;
+    background-repeat: repeat-y;
+    height: 100vh;
+}
+
+/* CONFIGS PARA O CONTAINER DOS TEXTOS */
+
+.container__textInit {
+    width: 100%;
+}
+
+.container__textPorti {
+    font-size: 1.3em;
+    line-height: 1em;
+}
+
+.container__textMyName {
+    font-size: 2.5em;
+    line-height: 1em;
+    font-weight: 700;
+    color: var(--versio-blue);
+}
+
+.container__textSecund {
+    font-size: 1.8em;
+    line-height: 1em;
+    font-weight: 600;
+}
+
+/* ANIMATION TEXT */
+
+.container__textMyName::after {
+    content: 'i';
+    font-size: .9em;
+    color: var(--versio-blue);
+    background-color: var(--versio-blue);
+    animation: animationText 2.3s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-left: 10px;
+}
+
+@keyframes animationText {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 100%;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+
+/* CONFIGS PARA O BTN */
+
+.container__btn {
+    transition: all .3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(91.96deg, #8257E6 0%, #1E0C24 100%);
+    border-radius: 50px;    
+    width: 20%;
+    cursor: pointer;
+}
+
+/* ANIMAÇÕES PARA O BTN */
+
+.container__btn:hover {
+    transform: scale(0.90);
+    opacity: 70%;
+}
+
+
+
+.container__btn a,
+.container__btn p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--fundo);
+    border-radius: 50px;   
+    padding: 10px;
+    width: 90%;
+    height: 80%;
+}
+
+/* CONFIGS PARA O TEXTO SOBRE MIM */
+
+.container__textApresentacao {
+    width: 60%;
+}
+
+.container__textApresentacao span {
+    font-weight: 600;
+    color: var(--versio-blue);
+}
+
+/* CONFIGS PARA A PARTE DE HABILIDADES */
+
+.container__habilidades {
+    grid-area: habilit;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container__textHabilitsPrincipal,
+.container__textProjetosPrincipal,
+.container__textContatosPrincipal {
+    transition: all .7s ease;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.container__textHabilitsPrincipal::after,
+.container__textProjetosPrincipal::after,
+.container__textContatosPrincipal::after {
+    content: ' ';
+    background-color: #8257E6;
+    display: flex;
+    width: 50%;
+    height: 7px;
+}
+
+/* CONFIGS PARA A DIV DOS COMPONENTES */
+
+.container__divComponent {
+    transition: all .7s ease;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.container__component {
+    transition: all .3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--fundo2);
+    border-radius: 20px 0 10px 0;
+}
+
+.container__component::after {
+    content: ' ';
+    width: 100%;
+    height: 10px;
+    background-color: var(--versio-blue);
+    border-radius: 0 0 20px 0;
+}
+
+.container__component img {
+    width: 120px;
+    padding: 17px;
+}
+
+.not--view {
+    transform: translateX(-40px);
+    opacity: 0;
+}
+
+/* CONFIG ANIMATION DIV DOS COMPONENTS */
+
+.container__component:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+/* CONFIGS PARA CONTAINER PROJETO */
+
+.container__projetos {
+    grid-area: projetos;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container__divProjetos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container__projeto {
+    transition: all .3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 150px;
+    background-color: var(--fundo3);
+    cursor: pointer;
+}
+
+.container__projeto::after {
+    content: ' ';
+    width: 100%;
+    height: 10px;
+    background-color: var(--versio-blue);
+}
+
+.container__projeto a {
+    width: 100%;
+    height: 100%;
+}
+
+.container__projeto:hover {
+    transform: scale(1.3);
+}
+
+/* CONFIG PARA AS ANIMAÇÕES DE MOSTRAR MAIS */
+
+.container__divProjetosOn,
+.container__divProjetosNone {
+    display: flex;
+    gap: 20px;
+} 
+
+.off {
+    display: none;
+}
+
+/* CONFIGS PARA O BTN DE MOSTRAR MAIS */
+
+.container__btnProjetos {
+    align-self: flex-end;
+}
+
+/* CONFIGS PARA A DIV CONTANTOS */
+
+.container__divContatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    grid-area: contatos;
+}
+
+.container__divItensContatos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container__redesComponentes {
+    transition: .3s all ease;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container__redesComponentes:hover {
+    transform: scale(.85);
+    opacity: 60%;
+}
+
+.container__redesComponentes img {
+    width: 50%;
+}
+
+.container__divImgComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo2);
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+
+
+.container__textPrincipalRedesComponents {
+    font-weight: 700;
+}
+
+.container__textSecundRedesComponents {
+    font-weight: 500;
+    color: var(--text-contatos);
+    font-size: .9em;
+}
