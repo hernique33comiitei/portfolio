@@ -19,8 +19,9 @@ function mostrarBordal() {
 }
 
 let elements = criarElementosBordal()
+
 function criarBordalMenu() {
-    if (contBordalMenu == 1) {     
+    if (contBordalMenu == 1) {  
 
         // ADICIONAR ITENS AQUI
         
@@ -28,6 +29,8 @@ function criarBordalMenu() {
             bordal.appendChild(elements[n])
         }
 
+        btnMenu.style.background = 'transparent'
+        btnMenu.style.borderBottom = '0 solid transparent'
         container.style.filter = 'blur(5px)'
         body.style.overflow = 'hidden'
         imgMenu.src = '../icons/sair-menu.png'
@@ -38,7 +41,10 @@ function criarBordalMenu() {
             elements.pop()
             console.log(elements)
         }
+
         bordal.remove()
+        btnMenu.style.background = '#0D0A0E'
+        btnMenu.style.borderBottom = '2px solid #8257E699'
         imgMenu.src = '../icons/menu.png'
         body.style.overflow = 'auto'
         container.style.filter = 'blur(0px)'
@@ -74,4 +80,4 @@ function criarElementosBordal() {
     return totalElements
 }
 
-btnMenu.addEventListener('click', mostrarBordal)
+imgMenu.addEventListener('click', mostrarBordal)

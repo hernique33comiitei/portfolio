@@ -1,0 +1,112 @@
+/* CONFIGS PARA A ALTURA */
+
+@media (max-height: 700px) {
+    .container {
+        min-height: 2500px !important;
+    }
+
+    :root {
+        --height: 100%; 
+    }
+}
+
+/* CONFIGS PARA A LARGURA */
+
+@media (max-width: 320px) {
+    .container__textHabilitsPrincipal,
+    .container__textProjetosPrincipal,
+    .container__textContatosPrincipal {
+        font-size: 10vw;
+    }
+
+    .container__textApresentacao {
+        width: 100%;
+    }
+    
+    .container__textMyName,
+    .container__textSecund {
+        word-break: break-all;
+    }
+
+    .container__btn a {
+        font-size: 5vw;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .container__divItensContatos {
+        overflow-x: scroll;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+
+    .container__divItensContatos::-webkit-scrollbar {
+        background-color: var(--fundo);
+        height: 7px;
+    }
+
+    .container__divItensContatos::-webkit-scrollbar-thumb {
+        background-color: var(--fundo2);
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container__imagemFrontEnd {
+        display: none;
+    }
+
+    .container__divProjetos {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .container__divProjetosOn,
+    .container__divProjetosNone {
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+    }
+
+    .container__projeto {
+        width: 100%;
+    }
+
+    .container__projeto:hover {
+        transform: scale(1.1);
+    }
+
+    .container__btnProjetos {
+        grid-column: span 2;
+        justify-self: flex-start;
+    }
+}
+
+@media (max-width: 920px) {
+    body {
+        display: block;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container__divComponent {
+        padding: 25px 20px;
+        overflow-x: scroll;
+        max-width: 80%;
+        justify-content: flex-start;
+    }
+    
+    /* CONFIGS PARA O SCROLL */
+    
+    .container__divComponent::-webkit-scrollbar {
+        background-color: var(--fundo);
+        height: 7px;   
+    }
+    
+    .container__divComponent::-webkit-scrollbar-thumb {
+        background: var(--fundo2);
+        border-radius: 10px;
+    }
+}
+

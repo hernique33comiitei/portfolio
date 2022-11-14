@@ -27,10 +27,7 @@ const creat = new IntersectionObserver(entrie => {
         containerTextHabilitsPrincipals.classList.remove('not--view')
         containerDivComponent.classList.remove('not--view')
 
-    } else {
-        containerTextHabilitsPrincipals.classList.add('not--view')
-        containerDivComponent.classList.add('not--view')
-    }
+    } 
 }, {
     threshold: 1
 })
@@ -46,10 +43,7 @@ const creatProjetos = new IntersectionObserver(entrie => {
     if (entrie[0].isIntersecting == true) {
         containerTextProjetosPrincipal.classList.remove('not--view')
         containerDivProjetos.classList.remove('not--view')
-    } else {
-        containerTextProjetosPrincipal.classList.add('not--view')
-        containerDivProjetos.classList.add('not--view')
-    }
+    } 
 }, {
     threshold: 1
 })
@@ -66,10 +60,7 @@ const creatContatos = new IntersectionObserver(entrie => {
     if (entrie[0].isIntersecting == true) {
         containerTextContatosPrincipal.classList.remove('not--view')
         containerDivItensContatos.classList.remove('not--view')
-    } else {
-        containerTextContatosPrincipal.classList.add('not--view')
-        containerDivItensContatos.classList.add('not--view')
-    }
+    } 
 }, {
     threshold: 1
 })
@@ -82,8 +73,10 @@ creatContatos.observe(containerDivItensContatos)
 const containerBtnProjetos = document.querySelector('.container__btnProjetos')
 const containerDivProjetosNone = document.querySelector('.container__divProjetosNone')
 const containerBtnProjetosText = document.querySelector('#container__btnProjetosText')
+const containerDivProjeto = document.querySelector('.container__divProjetos')
 let contForBtnMais = 0
 
+containerBtnProjetos.style.marginTop = '20px'
 containerBtnProjetos.addEventListener('click', () => {
     if (contForBtnMais >= 2) {
         contForBtnMais = 0
@@ -94,9 +87,14 @@ containerBtnProjetos.addEventListener('click', () => {
     if (contForBtnMais == 1) {
         containerDivProjetosNone.classList.remove('off')
         containerBtnProjetosText.textContent = 'Menos'
+        containerDivProjeto.style.gridTemplateColumns = '50% 50%'
+        containerDivProjeto.style.gap = '20px'
+        containerBtnProjetos.style.marginTop = '0'
     } else {
         containerDivProjetosNone.classList.add('off')
         containerBtnProjetosText.textContent = 'Mais'
+        containerDivProjeto.style.gridTemplateColumns = '100%'
+        containerDivProjeto.style.gap = '0'
+        containerBtnProjetos.style.marginTop = '20px'
     }
 })
-

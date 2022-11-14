@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/mqIndex.css">
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon">
 
     <title>Portfólio | Henrique Oliveira</title>
 </head>
@@ -16,28 +18,32 @@
         <img class="menu__image" src="icons/menu.png" alt="Icone menu">
     </div>
     <div class="container">
-        <div class="container__divTexts" id="section--home">
-            <div class="container__textInit">
-                <p class="container__textPorti">PORTFÓLIO</p>
-                <p class="container__textMyName">H</p>
-                <p class="container__textSecund">FULL STACK WEB DEVELOPER</p>
+
+        <div class="container__home">
+            <div class="container__divTexts" id="section--home">
+                <div class="container__textInit">
+                    <p class="container__textPorti">PORTFÓLIO</p>
+                    <p class="container__textMyName">H</p>
+                    <p class="container__textSecund">FULL STACK WEB DEVELOPER</p>
+                </div>
+                <!-- BTN -->
+                <div class="container__btn">
+                    <a href="http://wa.me/5579999167112" target="_blank">Entrar Em Contato</a>
+                </div>
+                <!-- TXT DE APRESENTAÇÃO -->
+                <div class="container__textApresentacao">
+                    <p>Olá, eu me chamo <span>Henrique Oliveira</span> e sou desenvolvedor web <span>Full stack.</span> No Momento estudo no Instituto Federal de Educação, Ciência e Tecnologia de Sergipe, Campus Lagarto é resido em Lagarto - SE.
+                    </p>
+                </div>
             </div>
-            <!-- BTN -->
-            <div class="container__btn">
-                <a href="#">Entrar Em Contato</a>
-            </div>
-            <!-- TXT DE APRESENTAÇÃO -->
-            <div class="container__textApresentacao">
-                <p>Olá, eu me chamo <span>Henrique Oliveira</span> e sou desenvolvedor web <span>Full stack.</span> No Momento estudo no Instituto Federal de Educação, Ciência e Tecnologia de Sergipe, Campus Lagarto é resido em Lagarto - SE.
-                </p>
-            </div>
+            <div class="container__imagemFrontEnd"></div>
         </div>
-        <div class="container__imagemFrontEnd"></div>
 
         <!-- PARTE DAS HABILIDADES -->
 
         <div class="container__habilidades" id="section--habilidades">
             <p class="container__textHabilitsPrincipal not--view">HABILIDADES</p>
+
             <div class="container__divComponent not--view">
                 <div class="container__component">
                     <img src="icons/html-icon.png" alt="Icon HTML5">
@@ -50,6 +56,12 @@
                 </div>
                 <div class="container__component">
                     <img src="icons/python-icon.png" alt="Icon CSS3">
+                </div>
+                <div class="container__component">
+                    <img src="icons/django-icon.png" alt="Icon DJANGO">
+                </div>
+                <div class="container__component">
+                    <img src="icons/mysql-icon.png" alt="Icon MYSQL">
                 </div>
                 
             </div>   
@@ -64,13 +76,13 @@
                 <div class="container__divProjetosOn">
                     <div class="container__projeto pokeiou"><a href="https://pokeiou.netlify.app/" target="_blank"></a></div>
                     <div class="container__projeto wildbeast"><a href="https://wildbeast-css-grid.web.app/" target="_blank"></a></div>
-                    <div class="container__projeto"><a href="#"></a></div>
+                    <div class="container__projeto"><a href="#section--projetos"></a></div>
                 </div>
 
                 <div class="container__divProjetosNone off">
-                    <div class="container__projeto"><a href="#"></a></div>
-                    <div class="container__projeto"><a href="#"></a></div>
-                    <div class="container__projeto"><a href="#"></a></div>
+                    <div class="container__projeto"><a href="#section--projetos"></a></div>
+                    <div class="container__projeto"><a href="#section--projetos"></a></div>
+                    <div class="container__projeto"><a href="#section--projetos"></a></div>
                 </div> 
                 
                 <div class="container__btn container__btnProjetos">
@@ -86,7 +98,8 @@
             <p class="container__textContatosPrincipal not--view">Contatos</p> 
             <div class="container__divItensContatos not--view">
                 
-                <div class="container__redesComponentes ">
+                <div class="container__redesComponentes">
+                    <a target="_blank" href="https://github.com/hernique33comiitei"></a>
                     <div class="container__divImgComponent">
                         <img src="icons/git-hub-icon.png" alt="Icon Git Hub">
                     </div>
@@ -95,6 +108,7 @@
                 </div>
 
                 <div class="container__redesComponentes">
+                    <a target="_blank" href="https://www.linkedin.com/in/henrique-oliveira-1639a924a/"></a>
                     <div class="container__divImgComponent">
                         <img src="icons/linkdin-icon.png" alt="Icon LinkedIn">
                     </div>
@@ -107,10 +121,11 @@
                         <img src="icons/email-icon.png" alt="Icon Email">
                     </div>
                     <p class="container__textPrincipalRedesComponents">Email</p>
-                    <p class="container__textSecundRedesComponents">@hernique33comiitei</p>
+                    <p class="container__textSecundRedesComponents wrap--linha ">henrique.santos122@academico.ifs.edu.br</p>
                 </div>
 
                 <div class="container__redesComponentes">
+                    <a target="_blank" href="http://wa.me/5579999167112"></a>
                     <div class="container__divImgComponent">
                         <img src="icons/telefone-icon.png" alt="Icon Telefone">
                     </div>
