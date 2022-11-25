@@ -42,7 +42,7 @@
     }
 
     .container__divItensContatos::-webkit-scrollbar {
-        background-color: var(--fundo);
+        background-color: transparent;
         height: 7px;
     }
 
@@ -100,7 +100,7 @@
     /* CONFIGS PARA O SCROLL */
     
     .container__divComponent::-webkit-scrollbar {
-        background-color: var(--fundo);
+        background-color: transparent;
         height: 7px;   
     }
     

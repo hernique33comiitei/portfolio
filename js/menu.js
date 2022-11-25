@@ -29,8 +29,6 @@ function criarBordalMenu() {
             bordal.appendChild(elements[n])
         }
 
-        btnMenu.style.background = 'transparent'
-        btnMenu.style.borderBottom = '0 solid transparent'
         container.style.filter = 'blur(5px)'
         body.style.overflow = 'hidden'
         imgMenu.src = '../icons/sair-menu.png'
@@ -43,8 +41,6 @@ function criarBordalMenu() {
         }
 
         bordal.remove()
-        btnMenu.style.background = '#0D0A0E'
-        btnMenu.style.borderBottom = '2px solid #8257E699'
         imgMenu.src = '../icons/menu.png'
         body.style.overflow = 'auto'
         container.style.filter = 'blur(0px)'

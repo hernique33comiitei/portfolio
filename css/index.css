@@ -11,10 +11,11 @@
 :root {
     --fundo: #0D0A0E;
     --versio-blue: #8257E6;
-    --fundo2: #212121;
-    --fundo3: #473A3A;
+    --fundo2: #222222;
+    --afterProjects: #39303C; 
     --text-contatos: #CCCCCC;
     --height: 100vh; 
+    --btnColor: #0D0A0C;
 }
 
 html {
@@ -34,7 +35,7 @@ body {
 /* CONFIGS PARA O CONTAINER */
 
 .container {
-    display: grid;
+    display: none; /*GRID*/
     grid-template-areas: 
     "home home"
     "habilit habilit"
@@ -104,32 +105,18 @@ body {
 }
 
 @keyframes animationText {
-    0% {
-        opacity: 100%;
-    }
+    0% {opacity: 100%;}
 
-    50% {
-        opacity: 100%;
-    }
+    50% {opacity: 100%;}
 
-    60% {
-        opacity: 0;
-    }
+    60% {opacity: 0;}
 
-    70% {
-        opacity: 100%;
-    }
+    70% {opacity: 100%;}
 
-    80% {
-        opacity: 0;
-    }
+    80% {opacity: 0;}
 
-    100% {
-        opacity: 100%;
-    }
-
+    100% {opacity: 100%;}
 }
-
 
 /* CONFIGS PARA O BTN */
 
@@ -161,7 +148,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     color: #ffffff;
-    background-color: var(--fundo);
+    background-color: var(--btnColor);
     border-radius: 50px;   
     padding: 5px 15px;
 
@@ -211,26 +198,11 @@ body {
 
 .container__divComponent {
     width: 100%;
-    /* padding: 25px 20px;
-    overflow-x: scroll;
-    max-width: 700px; */
     justify-content: center;
     transition: all .7s ease;
     display: flex;
     gap: 30px;
 }
-
-/* CONFIGS PARA O SCROLL */
-
-/* .container__divComponent::-webkit-scrollbar {
-    background-color: #0D0A0E;
-    height: 7px;   
-}
-
-.container__divComponent::-webkit-scrollbar-thumb {
-    background-color: #8257E6;
-    border-radius: 10px;
-} */
 
 .container__component {
     transition: all .3s ease;
@@ -238,7 +210,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--fundo2);
-    border-radius: 20px 0 10px 0;
+    filter: saturate(0) contrast(1.15);
+    border-radius: 15px;
 }
 
 .container__component::after {
@@ -246,7 +219,7 @@ body {
     width: 100%;
     height: 10px;
     background-color: var(--versio-blue);
-    border-radius: 0 0 20px 0;
+    border-radius: 0 0 15px 15px;
 }
 
 .container__component img {
@@ -264,7 +237,10 @@ body {
 
 .container__component:hover {
     cursor: pointer;
-    transform: scale(1.3);
+    outline: 3px solid #8257E6;
+    transform: scale(1.1);
+    filter: saturate(1);
+    /* box-shadow: 0 0 30px #39303c; */
 }
 
 /* CONFIGS PARA CONTAINER PROJETO */
@@ -283,19 +259,61 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* gap: 20px; */
     width: 80%;
 }
 
 .container__projeto {
     transition: all .3s ease;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     width: 30%;
     height: 150px;
-    background-color: var(--fundo3);
+    background-color: var(--fundo2);
     opacity: 60%;
     cursor: pointer;
+    box-shadow: 0 0 30px #39303c66;
+}
+
+.container__projetoAfter {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s ease;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    height: 0;
+    padding: 0 20px;
+    background-color: var(--afterProjects);
+}
+
+.container__projetoAfter p {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0;
+}
+
+.container__projeto a {
+    width: 100%;
+    height: 100%;
+}
+
+.container__projeto:hover {
+    transform: scale(1.3);
+    opacity: 100%;
+    z-index: 1;
+    box-shadow: 0 0 30px #39303c;
+}
+
+.container__projeto:hover
+.container__projetoAfter {
+    height: 30px;
+}
+
+.container__projeto:hover
+.container__projetoAfter p {
+    font-size: clamp(7px, 2vw, 10px);
 }
 
 /* COLOCAR AS IMAGES */
@@ -310,24 +328,6 @@ body {
     background: url('../img/wildbeast.png');
     background-position: center center;
     background-size: cover;
-}
-
-.container__projeto::after {
-    content: ' '; 
-    width: 100%;
-    height: 10px;
-    background-color: var(--versio-blue);
-}
-
-.container__projeto a {
-    width: 100%;
-    height: 100%;
-}
-
-.container__projeto:hover {
-    transform: scale(1.3);
-    opacity: 100%;
-    z-index: 1;
 }
 
 /* CONFIG PARA AS ANIMAÇÕES DE MOSTRAR MAIS */
@@ -376,6 +376,7 @@ body {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    filter: drop-shadow(0 0 30px #39303c66);
 }
 
 .container__redesComponentes a{
@@ -387,6 +388,7 @@ body {
 .container__redesComponentes:hover {
     transform: scale(.85);
     opacity: 60%;
+    filter: drop-shadow(0 0 30px #39303c);
 }
 
 .container__redesComponentes img {

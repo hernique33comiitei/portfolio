@@ -1,0 +1,56 @@
+.loading {
+    transition: all .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.loading__balls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.loading__balls > div {
+    transition: all .3s ease;
+    width: 0px;
+    height: 0px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+.loading__balls1 {
+    animation: animationBall1 1.2s infinite linear ;
+}
+
+.loading__balls2 {
+    animation: animationBall2 1.2s infinite linear ;
+}
+
+.loading__balls3 {
+    animation: animationBall3 1.2s infinite linear ;
+}
+
+@keyframes animationBall1 {
+    0% { width: 0px; height: 0px; opacity: 0;}
+    30% { width: 30px; height: 30px; opacity: 100;}
+    100% { width: 0px; height: 0px; opacity: 0;}
+}
+
+@keyframes animationBall2 {
+    0% { width: 0px; height: 0px; opacity: 0;}
+    50% { width: 30px; height: 30px; opacity: 100;}
+    100% { width: 0px; height: 0px; opacity: 0;}
+}
+
+@keyframes animationBall3 {
+    0% { width: 0px; height: 0px; opacity: 0;}
+    70% { width: 30px; height: 30px; opacity: 100;}
+    100% { width: 0px; height: 0px; opacity: 0;}
+}
