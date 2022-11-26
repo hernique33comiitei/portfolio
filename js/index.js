@@ -87,14 +87,14 @@ containerBtnProjetos.addEventListener('click', () => {
     if (contForBtnMais == 1) {
         containerDivProjetosNone.classList.remove('off')
         containerBtnProjetosText.textContent = 'Menos'
-        containerDivProjeto.style.gridTemplateColumns = '50% 50%'
-        containerDivProjeto.style.gap = '20px'
-        containerBtnProjetos.style.marginTop = '0'
+        // containerDivProjeto.style.gridTemplateColumns = '50% 50%'
+        // containerDivProjeto.style.gap = '20px'
+        // containerBtnProjetos.style.marginTop = '0'
     } else {
         containerDivProjetosNone.classList.add('off')
         containerBtnProjetosText.textContent = 'Mais'
-        containerDivProjeto.style.gridTemplateColumns = '100%'
-        containerDivProjeto.style.gap = '0'
-        containerBtnProjetos.style.marginTop = '20px'
+        // containerDivProjeto.style.gridTemplateColumns = '100%'
+        // containerDivProjeto.style.gap = '0'
+        // containerBtnProjetos.style.marginTop = '20px'
     }
 })

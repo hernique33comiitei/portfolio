@@ -5,9 +5,17 @@
         min-height: 2500px !important;
     }
 
-    :root {
-        --height: 100%; 
+    .container__home,
+    .container__habilidades,
+    .container__projetos,
+    .container__divContatos {
+        min-height: 700px;
     }
+
+
+    /* :root {
+        --height: 100%; 
+    } */
 }
 
 /* CONFIGS PARA A LARGURA */
@@ -34,6 +42,7 @@
 
 }
 
+
 @media (max-width: 600px) {
     .container__divItensContatos {
         overflow-x: scroll;
@@ -53,14 +62,51 @@
 }
 
 @media (max-width: 700px) {
+
+    /* .container__textProjetosPrincipal {
+        margin-bottom: 20px;
+    } */
+
+
+
     .container__imagemFrontEnd {
         display: none;
     }
 
-    .container__divProjetos {
+    .container__textApresentacao {
+        width: 80%;
+    }
+
+    .container__textInit {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* .container__divProjetos {
+        gap: 20px;
         display: grid;
         grid-template-columns: 100%;
+    } */
+
+
+}
+
+@media (max-width: 920px) {
+    body {
+        display: block;
     }
+
+    .container__projetos  {
+        gap: 40px;
+    }
+
+
+    /* .container__divProjetos {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: 100%;
+    } */
 
     .container__divProjetosOn,
     .container__divProjetosNone {
@@ -78,15 +124,9 @@
     }
 
     .container__btnProjetos {
-        grid-column: span 2;
+        /* grid-column: span 2; */
         justify-self: flex-start;
-    }
-}
-
-@media (max-width: 920px) {
-    body {
-        display: block;
-    }
+    }    
 }
 
 @media (max-width: 1100px) {
@@ -110,3 +150,30 @@
     }
 }
 
+
+    /* CONFIGS PARA TROCAR FLEX DIRECTION DOS BTNS AFTER LINK */
+
+@media (max-width: 1000px) {
+
+    /* .container__projeto {
+        height: 400px;
+    } */
+
+    /* .container__projetoAfterSubTitle {
+        text-align: justify;
+    } */
+
+    /* .container__projetoDivLinks a {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .container__projetoAfterImage {
+        height: 40%;
+    } */
+
+    /* .container__projetoDivLinks {
+        flex-direction: column;
+        gap: 2px;
+    } */
+}
