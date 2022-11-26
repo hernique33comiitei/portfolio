@@ -29,10 +29,10 @@ const creat = new IntersectionObserver(entrie => {
 
     } 
 }, {
-    threshold: 1
+    threshold: .5
 })
 
-creat.observe(containerTextHabilitsPrincipals)
+// creat.observe(containerTextHabilitsPrincipals)
 creat.observe(containerDivComponent)
 
 // DIV PROJETOS
@@ -62,10 +62,10 @@ const creatContatos = new IntersectionObserver(entrie => {
         containerDivItensContatos.classList.remove('not--view')
     } 
 }, {
-    threshold: 1
+    threshold: .5
 })
 
-creatContatos.observe(containerTextContatosPrincipal)
+// creatContatos.observe(containerTextContatosPrincipal)
 creatContatos.observe(containerDivItensContatos)
 
 // CONFIGS PARA O MOSTRAR MAIS DOS PROJETOS
@@ -87,14 +87,8 @@ containerBtnProjetos.addEventListener('click', () => {
     if (contForBtnMais == 1) {
         containerDivProjetosNone.classList.remove('off')
         containerBtnProjetosText.textContent = 'Menos'
-        // containerDivProjeto.style.gridTemplateColumns = '50% 50%'
-        // containerDivProjeto.style.gap = '20px'
-        // containerBtnProjetos.style.marginTop = '0'
     } else {
         containerDivProjetosNone.classList.add('off')
         containerBtnProjetosText.textContent = 'Mais'
-        // containerDivProjeto.style.gridTemplateColumns = '100%'
-        // containerDivProjeto.style.gap = '0'
-        // containerBtnProjetos.style.marginTop = '20px'
     }
 })
