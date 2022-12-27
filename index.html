@@ -1,204 +1,305 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/mqIndex.css">
-    <link rel="stylesheet" href="css/load.css">
-    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/mqIndex.css" />
+    <link rel="stylesheet" href="css/load.css" />
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/carrosel.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
 
     <title>Portfólio | Henrique Oliveira</title>
-</head>
-<body onload="mytext(), loading()">
-    
+  </head>
+  <body onload="mytext(), loading()">
     <!-- BORDAL DE LOANDING -->
 
     <div class="loading">
-        <div class="loading__balls">
-            <div class="loading__balls1"></div>
-            <div class="loading__balls2"></div>
-            <div class="loading__balls3"></div>
-        </div>
+      <div class="loading__balls">
+        <div class="loading__balls1"></div>
+        <div class="loading__balls2"></div>
+        <div class="loading__balls3"></div>
+      </div>
     </div>
 
     <!-- MENU -->
 
     <div class="menu">
-        <div class="menuBack"></div>
-        <img class="menu__image" src="icons/menu.png" alt="Icone menu">
+      <span class="material-symbols-outlined menu__image"> menu </span>
+      <div class="menuOptDesk">
+        <a href="#section--home">Home</a>
+        <a href="#section--habilidades">Habilidades</a>
+        <a href="#section--projetos">Projetos</a>
+        <a href="#section--contatos">Contatos</a>
+      </div>
+      <div class="copySucess copySucessNotView">
+        <p>Copiado com Sucesso!! &#128526;</p>
+      </div>
     </div>
     <div class="container">
+      <div class="container__home">
+        <div class="container__divTexts" id="section--home">
+          <div class="container__textInit">
+            <p class="container__textPorti">PORTFÓLIO</p>
+            <p class="container__textMyName">H</p>
+            <p class="container__textSecund">FULL STACK WEB DEVELOPER</p>
+          </div>
+          <!-- BTN -->
+          <div class="container__btn">
+            <a href="http://wa.me/5579999167112" target="_blank"
+              >Entrar Em Contato</a
+            >
+          </div>
+          <!-- TXT DE APRESENTAÇÃO -->
+          <div class="container__textApresentacao">
+            <p>
+              Olá, eu me chamo <span>Henrique Oliveira</span> e sou
+              desenvolvedor web <span>Full stack.</span> No Momento estudo no
+              Instituto Federal de Educação, Ciência e Tecnologia de Sergipe,
+              Campus Lagarto é resido em Lagarto - SE.
+            </p>
+          </div>
+        </div>
+        <div class="container__imagemFrontEnd"></div>
+      </div>
 
-        <div class="container__home">
-            <div class="container__divTexts" id="section--home">
-                <div class="container__textInit">
-                    <p class="container__textPorti">PORTFÓLIO</p>
-                    <p class="container__textMyName">H</p>
-                    <p class="container__textSecund">FULL STACK WEB DEVELOPER</p>
-                </div>
-                <!-- BTN -->
-                <div class="container__btn">
-                    <a href="http://wa.me/5579999167112" target="_blank">Entrar Em Contato</a>
-                </div>
-                <!-- TXT DE APRESENTAÇÃO -->
-                <div class="container__textApresentacao">
-                    <p>Olá, eu me chamo <span>Henrique Oliveira</span> e sou desenvolvedor web <span>Full stack.</span> No Momento estudo no Instituto Federal de Educação, Ciência e Tecnologia de Sergipe, Campus Lagarto é resido em Lagarto - SE.
-                    </p>
-                </div>
+      <!-- PARTE DAS HABILIDADES -->
+
+      <div class="container__habilidades" id="section--habilidades">
+        <p class="container__textHabilitsPrincipal not--view">HABILIDADES</p>
+
+        <div class="container__divComponent not--view">
+          <div class="container__component react">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="Icon React"
+            />
+          </div>
+          <div class="container__component html">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="Icon HTML5"
+            />
+          </div>
+          <div class="container__component css">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="Icon CSS3"
+            />
+          </div>
+          <div class="container__component js">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="Icon JAVASCRIPT"
+            />
+          </div>
+          <div class="container__component python">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Icon python"
+            />
+          </div>
+          <div class="container__component django">
+            <i class="devicon-django-plain"></i>
+          </div>
+          <div class="container__component mysql">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+              alt="Icon MYSQL"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- PARTE DOS MEUS PROJETOS -->
+
+      <div class="container__projetos" id="section--projetos">
+        <span class="container__projetosSpanBall"></span>
+        <span class="container__projetosSpanBall"></span>
+        <p class="container__textProjetosPrincipal not--view">PROJETOS</p>
+
+        <!--DELETE-->
+        <!-- <div id="container__animationLottie"></div> -->
+
+        <div class="swiper">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+
+      <!-- CONFIGS PARA A DIV DE CONTATOS -->
+
+      <div class="container__divContatos" id="section--contatos">
+        <p class="container__textContatosPrincipal not--view">Contatos</p>
+
+        <div class="container__contatos">
+          <!-- INIT SECTION MODIFICATE -->
+
+          <!-- GIT HUB -->
+          <input
+            checked
+            class="inputContatos"
+            type="radio"
+            name="inputContatos"
+            id="inputContatosGit"
+          />
+          <div class="componentsContatos">
+            <p class="componentsContatos__textPrincipal">GITHUB</p>
+            <img src="icons/git-hub-icon.png" alt="Icon Git Hub" />
+            <div class="componentsContatosLinkDiv">
+              <div class="componentsContatosLink">
+                <input
+                  type="text"
+                  readonly
+                  value="https://github.com/hernique33comiitei"
+                />
+                <span class="material-symbols-outlined"> content_copy </span>
+              </div>
+              <a target="_blank" href="https://github.com/hernique33comiitei"
+                >Ir para Git Hub</a
+              >
             </div>
-            <div class="container__imagemFrontEnd"></div>
-        </div>
+          </div>
 
-        <!-- PARTE DAS HABILIDADES -->
+          <!-- WHATSAPP -->
+          <input
+            class="inputContatos"
+            type="radio"
+            name="inputContatos"
+            id="inputContatosZap"
+          />
 
-        <div class="container__habilidades" id="section--habilidades">
-            <p class="container__textHabilitsPrincipal not--view">HABILIDADES</p>
+          <div class="componentsContatos">
+            <p class="componentsContatos__textPrincipal">WHATSAPP</p>
+            <img src="icons/telefone-icon.png" alt="Icon WHATSAPP" />
+            <div class="componentsContatosLinkDiv">
+              <div class="componentsContatosLink">
+                <input type="text" readonly value="+55 79 9 9916-7112" />
 
-            <div class="container__divComponent not--view">
-                <div class="container__component">
-                    <img src="icons/html-icon.png" alt="Icon HTML5">
-                </div>
-                <div class="container__component">
-                    <img src="icons/css-icon.png" alt="Icon CSS3">
-                </div>
-                <div class="container__component">
-                    <img src="icons/javascript-icon.png" alt="Icon JAVASCRIPT">
-                </div>
-                <div class="container__component">
-                    <img src="icons/python-icon.png" alt="Icon CSS3">
-                </div>
-                <div class="container__component">
-                    <img src="icons/django-icon.png" alt="Icon DJANGO">
-                </div>
-                <div class="container__component">
-                    <img src="icons/mysql-icon.png" alt="Icon MYSQL">
-                </div>
-                
-            </div>   
-        </div>
-
-        <!-- PARTE DOS MEUS PROJETOS -->
-
-        <div class="container__projetos" id="section--projetos" >
-            <p class="container__textProjetosPrincipal not--view">PROJETOS</p>
-            <div class="container__divProjetos not--view ">
-                
-                <div class="container__divProjetosOn">
-
-                    <!-- TEMPLATE PROJETO -->
-                    <div class="container__projeto">
-                        <div class="pokeiou container__projetoLink"></div>
-                        <div class="container__projetoAfter">
-                            <p class="container__projetoAfterTitle">Pokeiou</p>
-                            <p class="container__projetoAfterSubTitle">Pokeiou é aplicação web consumindo a PokeApi, sendo usado apenas HTML, CSS e Javascript.</p>
-                            <div class="container__projetoDivLinks">
-                                <a href="https://pokeiou.netlify.app/" target="_blank">
-                                    Site
-                                    <img src="icons/open-site-icon.png" class="container__projetoAfterImage" alt="Image to GitHub">
-                                    <div class="container__projetoAfterImageAfter" ></div>
-                                </a>
-                                <a href="https://github.com/hernique33comiitei/pokeiou" target="_blank">
-                                    GitHub
-                                    <img src="icons/git-hub-icon.png" class="container__projetoAfterImage" alt="Image to GitHub">
-                                    <div class="container__projetoAfterImageAfter" ></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END TEMPLATE -->
-
-                    <div class="container__projeto">
-                        <div class="wildbeast container__projetoLink"></div>
-                        <div class="container__projetoAfter">
-                            <p class="container__projetoAfterTitle">Wildbeast</p>
-                            <p class="container__projetoAfterSubTitle">Wildbeast é uma aplicação web, criado no curso de grid da Origamid.</p>
-                            <div class="container__projetoDivLinks">
-                                <a href="https://wildbeast-css-grid.web.app/" target="_blank">
-                                    Site
-                                    <img src="icons/open-site-icon.png" class="container__projetoAfterImage" alt="Image to GitHub">
-                                    <div class="container__projetoAfterImageAfter" ></div>
-                                </a>
-                                <a href="https://github.com/hernique33comiitei/wildbeast-css-grid" target="_blank">
-                                    GitHub
-                                    <img src="icons/git-hub-icon.png" class="container__projetoAfterImage" alt="Image to GitHub">
-                                    <div class="container__projetoAfterImageAfter" ></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container__projeto">
-                        <a href="#section--projetos"></a>
-                    </div>
-
-                </div>
-
-                <div class="container__divProjetosNone off">
-                    <div class="container__projeto"><a href="#section--projetos"></a></div>
-                    <div class="container__projeto"><a href="#section--projetos"></a></div>
-                    <div class="container__projeto"><a href="#section--projetos"></a></div>
-                </div> 
-                
-                <div class="container__btn container__btnProjetos">
-                    <p id="container__btnProjetosText" >Mais</p>
-                </div>
-
+                <span class="material-symbols-outlined"> content_copy </span>
+              </div>
+              <a target="_blank" href="http://wa.me/5579999167112"
+                >Ir para o Whatsapp</a
+              >
             </div>
-        </div>
+          </div>
 
-        <!-- CONFIGS PARA A DIV DE CONTATOS -->
+          <!-- EMAIL -->
+          <input
+            class="inputContatos"
+            type="radio"
+            name="inputContatos"
+            id="inputContatosEmail"
+          />
 
-        <div class="container__divContatos" id="section--contatos">
-            <p class="container__textContatosPrincipal not--view">Contatos</p> 
-            <div class="container__divItensContatos not--view">
-                
-                <div class="container__redesComponentes">
-                    <a target="_blank" href="https://github.com/hernique33comiitei"></a>
-                    <div class="container__divImgComponent">
-                        <img src="icons/git-hub-icon.png" alt="Icon Git Hub">
-                    </div>
-                    <p class="container__textPrincipalRedesComponents">Git Hub</p>
-                    <p class="container__textSecundRedesComponents">@hernique33comiitei</p>
-                </div>
-
-                <div class="container__redesComponentes">
-                    <a target="_blank" href="https://www.linkedin.com/in/henrique-oliveira-1639a924a/"></a>
-                    <div class="container__divImgComponent">
-                        <img src="icons/linkdin-icon.png" alt="Icon LinkedIn">
-                    </div>
-                    <p class="container__textPrincipalRedesComponents">LinkedIn</p>
-                    <p class="container__textSecundRedesComponents">@henriqueoliveira</p>
-                </div>
-
-                <div class="container__redesComponentes">
-                    <div class="container__divImgComponent">
-                        <img src="icons/email-icon.png" alt="Icon Email">
-                    </div>
-                    <p class="container__textPrincipalRedesComponents">Email</p>
-                    <p class="container__textSecundRedesComponents wrap--linha ">henrique.santos122@academico.ifs.edu.br</p>
-                </div>
-
-                <div class="container__redesComponentes">
-                    <a target="_blank" href="http://wa.me/5579999167112"></a>
-                    <div class="container__divImgComponent">
-                        <img src="icons/telefone-icon.png" alt="Icon Telefone">
-                    </div>
-                    <p class="container__textPrincipalRedesComponents">Telefone</p>
-                    <p class="container__textSecundRedesComponents">(79) 9 9916-7112</p>
-                </div>
-
+          <div class="componentsContatos">
+            <p class="componentsContatos__textPrincipal">WEBMAIL</p>
+            <img src="icons/email-icon.png" alt="Icon EMAIL" />
+            <div class="componentsContatosLinkDiv">
+              <div class="componentsContatosLink">
+                <input
+                  type="text"
+                  readonly
+                  value="henrique.santos122@academico.ifs.edu.br"
+                />
+                <span class="material-symbols-outlined"> content_copy </span>
+              </div>
             </div>
+          </div>
+
+          <!-- LINKEDIN -->
+          <input
+            class="inputContatos"
+            type="radio"
+            name="inputContatos"
+            id="inputContatosLinkedin"
+          />
+
+          <div class="componentsContatos">
+            <p class="componentsContatos__textPrincipal">LINKEDIN</p>
+            <img src="icons/linkdin-icon.png" alt="Icon LINKEDIN" />
+            <div class="componentsContatosLinkDiv">
+              <div class="componentsContatosLink">
+                <input
+                  type="text"
+                  readonly
+                  value="https://www.linkedin.com/in/henrique-oliveira-1639a924a/"
+                />
+                <span class="material-symbols-outlined"> content_copy </span>
+              </div>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/henrique-oliveira-1639a924a/"
+                >Ir para o LinkedIn</a
+              >
+            </div>
+          </div>
+
+          <!-- END SECTION MODIFICATE -->
+
+          <div class="container__contatosLabels">
+            <label for="inputContatosGit">
+              <img src="icons/git-hub-icon.png" alt="Icon Git Hub" />
+            </label>
+            <label for="inputContatosZap">
+              <img src="icons/telefone-icon.png" alt="Icon for telephone" />
+            </label>
+            <label for="inputContatosEmail">
+              <img src="icons/email-icon.png" alt="Icon for Email" />
+            </label>
+            <label for="inputContatosLinkedin">
+              <img src="icons/linkdin-icon.png" alt="Icone LinkedIn" />
+            </label>
+          </div>
         </div>
-    
+      </div>
+
+      <!-- CONTAINER FOOTER -->
+
+      <div class="container__footer">
+        <div class="container__footerBack"></div>
+        <img src="img/logo-compt.png" alt="My logotipo" />
+        <p>Copyright © | Coded with <span>Henrique Oliveira</span></p>
+        <div class="container__footerLinks">
+          <a target="_blank" href="http://wa.me/5579999167112">Telefone</a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/henrique-oliveira-1639a924a/"
+            >Linkdin</a
+          >
+          <a target="_blank" href="https://github.com/hernique33comiitei"
+            >Git Hub</a
+          >
+        </div>
+      </div>
     </div>
 
     <script src="js/index.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/load.js"></script>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module" src="js/carrosel.js"></script>
+  </body>
 </html>

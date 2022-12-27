@@ -1,142 +1,116 @@
 /* CONFIGS PARA A ALTURA */
 
 @media (max-height: 700px) {
-    .container {
-        min-height: 2500px !important;
-    }
+  .container {
+    min-height: 2500px !important;
+  }
 
-    .container__home,
-    .container__habilidades,
-    .container__projetos,
-    .container__divContatos {
-        min-height: 700px;
-    }
-
+  .container__home,
+  .container__habilidades,
+  .container__projetos,
+  .container__divContatos {
+    min-height: 700px;
+  }
 }
 
 /* CONFIGS PARA A LARGURA */
 
 @media (max-width: 320px) {
-    .container__textHabilitsPrincipal,
-    .container__textProjetosPrincipal,
-    .container__textContatosPrincipal {
-        font-size: 10vw;
-    }
+  .container__textHabilitsPrincipal,
+  .container__textProjetosPrincipal,
+  .container__textContatosPrincipal {
+    font-size: 10vw;
+  }
 
-    .container__textApresentacao {
-        width: 100%;
-    }
-    
-    .container__textMyName,
-    .container__textSecund {
-        word-break: break-all;
-    }
+  .container__textApresentacao {
+    width: 100%;
+  }
 
-    .container__btn a {
-        font-size: 5vw;
-    }
+  .container__textMyName,
+  .container__textSecund {
+    word-break: break-all;
+  }
+
+  .container__btn a {
+    font-size: 5vw;
+  }
 }
 
-
 @media (max-width: 600px) {
-    .container__divItensContatos {
-        overflow-x: scroll;
-        justify-content: flex-start;
-        padding: 20px;
-    }
+  .container__divItensContatos {
+    overflow-x: scroll;
+    justify-content: flex-start;
+    padding: 20px;
+  }
 
-    .container__divItensContatos::-webkit-scrollbar {
-        background-color: transparent;
-        height: 7px;
-    }
+  .container__divItensContatos::-webkit-scrollbar {
+    background-color: transparent;
+    height: 7px;
+  }
 
-    .container__divItensContatos::-webkit-scrollbar-thumb {
-        background-color: var(--fundo2);
-        border-radius: 10px;
-    }
+  .container__divItensContatos::-webkit-scrollbar-thumb {
+    background-color: var(--fundo2);
+    border-radius: 10px;
+  }
 }
 
 @media (max-width: 700px) {
-    .container__imagemFrontEnd {
-        display: none;
-    }
+  .container__imagemFrontEnd {
+    display: none;
+  }
 
-    .container__textApresentacao {
-        width: 80%;
-    }
+  .container__textApresentacao {
+    width: 80%;
+  }
 
-    .container__textInit {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
+  .container__textInit {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 @media (max-width: 920px) {
-    body {
-        display: block;
-    }
+  body {
+    display: block;
+  }
 
-    .container__projetos  {
-        gap: 40px;
-    }
+  .container__projetos {
+    gap: 40px;
+  }
 
-    .container__divProjetosOn,
-    .container__divProjetosNone {
-        flex-direction: column;
-        align-content: center;
-        width: 100%;
-    }
+  .container__divProjetosOn,
+  .container__divProjetosNone {
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
 
-    .container__projeto {
-        width: 100%;
-    }
+  .container__projeto {
+    width: 100%;
+  }
 
-    .container__projeto:hover {
-        transform: scale(1.1);
-    }
-
+  .container__projeto:hover {
+    transform: scale(1.1);
+  }
 }
 
-@media (max-width: 1100px) {
-    .container__divComponent {
-        padding: 25px 20px;
-        overflow-x: scroll;
-        max-width: 80%;
-        justify-content: flex-start;
-    }
-    
-    /* CONFIGS PARA O SCROLL */
-    
-    .container__divComponent::-webkit-scrollbar {
-        background-color: transparent;
-        height: 7px;   
-    }
-    
-    .container__divComponent::-webkit-scrollbar-thumb {
-        background: var(--fundo2);
-        border-radius: 10px;
-    }
-}
-
-    /* CONFIGS PARA TROCAR FLEX DIRECTION DOS BTNS AFTER LINK */
+/* CONFIGS PARA TROCAR FLEX DIRECTION DOS BTNS AFTER LINK */
 
 @media (max-width: 1000px) {
-
-    .container__divProjetosOn,
-    .container__divProjetosNone {
-        grid-template-columns: repeat(2, 40%);
-    } 
+  .container__divProjetosOn,
+  .container__divProjetosNone {
+    grid-template-columns: repeat(2, 40%);
+  }
 }
 
-
 @media (max-width: 750px) {
-    .container__divProjetosOn,
-    .container__divProjetosNone {
-        grid-template-columns: repeat(1, 100%);
-    } 
+  .container__divProjetosOn,
+  .container__divProjetosNone {
+    grid-template-columns: repeat(1, 100%);
+  }
 
-    .container__projeto {
-        max-width: 400px;
-    }
+  .container__projeto {
+    max-width: 400px;
+  }
 }

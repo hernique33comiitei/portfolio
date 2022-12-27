@@ -1,0 +1,104 @@
+/* CONFIGS PARA O SWIPER */
+
+.swiper {
+  width: 100%;
+  height: 50%;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* transition: all 0.3s ease; */
+  /* cursor: pointer; */
+  /* background-image: linear-gradient(90deg, #8257e64f, transparent); */
+}
+
+.swiper-slide:hover .divLinksProjects div {
+  border: 2px solid var(--fundo2);
+  padding: 2px 10px;
+}
+
+.swiper-slide:hover .divLinksProjects a {
+  font-size: clamp(15px, 2vw, 17px);
+}
+
+.swiper-pagination span {
+  background-color: var(--versio-blue);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--versio-blue);
+}
+
+/* CONFIGS PARA OS ITENS */
+
+.nameProject {
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--versio-blue);
+  font-size: clamp(17px, 2vw, 24px);
+}
+
+.divLanguagens {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.divLanguagens p:nth-child(2n - 1) {
+  color: #cbc2c2;
+}
+
+.divLanguagens p {
+  font-size: clamp(15px, 2vw, 17px);
+  font-weight: 500;
+}
+
+/* CONFIGS PARA OS LINKS */
+
+.divLinksProjects {
+  display: flex;
+  gap: 7px;
+}
+
+.divLinksProjects div {
+  position: relative;
+  display: flex;
+  transition: all 0.3s ease;
+  border: 0;
+  border-radius: 20px;
+  padding: 0;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.divLinksProjects a {
+  font-size: 0;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.22s ease;
+}
+
+.divLinksProjects a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: " ";
+  width: 101%;
+  height: 0%;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: var(--fundo2);
+  z-index: -1;
+}
+
+.divLinksProjects div:hover a::after {
+  /* background-color: var(--fundo2); */
+  height: 100%;
+}
