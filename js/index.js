@@ -93,6 +93,11 @@ arrayInputsCtts.map((e) => {
     item.style.cssText = `
     transform: translateY(-40px);
     background: #8257e6;
+    backdrop-filter: blur(17px) saturate(87%);
+    -webkit-backdrop-filter: blur(17px) saturate(87%);
+    background-color: rgba(130, 87, 230, 0.38);
+    border-radius: 12px;
+
     outline: 7px solid #222222;
     border-radius: 50%;
     `;
@@ -105,7 +110,10 @@ arrayInputsCtts.map((e) => {
       if (e.checked) {
         item.style.cssText = `
         transform: translateY(-40px);
-        background: #8257e6;
+        backdrop-filter: blur(17px) saturate(87%);
+        -webkit-backdrop-filter: blur(17px) saturate(87%);
+        background-color: rgba(130, 87, 230, 0.38);
+        border-radius: 12px;
         outline: 7px solid #222222;
         border-radius: 50%;
         `;

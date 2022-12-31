@@ -3,21 +3,21 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.brow
 // CARROSEL
 
 const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: false,
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 0,
+    modifier: 2,
+    slideShadows: false,
+  },
+  // direction: "horizontal",
+  centeredSlides: true,
+  grabCursor: true,
+  slidesPerView: "auto",
   pagination: {
     el: ".swiper-pagination",
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-
   createElements: true,
+  loop: false,
 });
 
 // ATUALIZAÇÃO DO CONTADOR PARA MUDAR OS DADOS DA API GIT HUB

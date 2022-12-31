@@ -10,9 +10,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* transition: all 0.3s ease; */
-  /* cursor: pointer; */
-  /* background-image: linear-gradient(90deg, #8257e64f, transparent); */
+  width: 80%;
+  max-width: 300px;
+  min-width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00000033;
+  pointer-events: none;
+  filter: blur(3px);
+  transition: all 0.2s ease !important;
+
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.73);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  opacity: 50%;
+}
+
+.swiper-slide-active {
+  pointer-events: all;
+  filter: blur(0);
+  opacity: 100%;
 }
 
 .swiper-slide:hover .divLinksProjects div {
