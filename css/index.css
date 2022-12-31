@@ -364,7 +364,6 @@ body {
 /* CONFIGS PARA A DIV CONTANTOS */
 
 .container__divContatos {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -373,18 +372,7 @@ body {
   grid-area: contatos;
 }
 
-#section--contatos {
-  background-color: var(--fundo);
-}
-
-.particles-js-canvas-el {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .container__contatos {
-  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
