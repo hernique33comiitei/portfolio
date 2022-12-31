@@ -464,7 +464,7 @@ body {
 .componentsContatosLink input {
   padding: 10px;
   width: 70%;
-  font-size: clamp(10px, 2vw, 14px);
+  font-size: clamp(12px, 2vw, 14px);
   font-weight: 500;
   text-overflow: ellipsis;
   overflow: hidden;

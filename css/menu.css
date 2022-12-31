@@ -19,6 +19,7 @@
 .menuOptDesk {
   gap: 10px;
   display: flex;
+  z-index: 2;
 }
 
 .menuOptDesk a {
