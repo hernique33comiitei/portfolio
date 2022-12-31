@@ -152,6 +152,7 @@ body {
   border-radius: 50px;
   padding: 5px;
   cursor: pointer;
+  box-shadow: inset 0 0 30px #8257e6;
 }
 
 /* ANIMAÇÕES PARA O BTN */
@@ -383,6 +384,7 @@ body {
   background-color: var(--fundo2);
   border-radius: 20px;
   overflow: hidden;
+  transition: all 0.7s ease;
 }
 
 .componentsContatos__textPrincipal {
@@ -489,25 +491,22 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #151515;
+  background-color: #101010;
   background-image: linear-gradient(90deg, #8257e6, #473374);
 }
 
 .container__contatosLabels label {
   height: 60px;
   width: 60px;
-}
-
-.container__contatosLabels img {
-  height: 60px;
-  width: 60px;
   padding: 15px;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.container__contatosLabels img:hover {
-  transform: translateY(-5px);
+.container__contatosLabels img {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 /* CONFIGS TO SHOW COMPONENTS THE CONTATOS */

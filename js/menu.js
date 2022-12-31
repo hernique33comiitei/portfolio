@@ -1,104 +1,56 @@
-// CRIAR BORDAL DO MENU
-
 const container = document.querySelector(".container");
 const btnMenu = document.querySelector(".menu");
-// const menuBack = document.querySelector(".menuBack");
-const bordal = document.createElement("div");
 const imgMenu = document.querySelector(".menu__image");
-const menuOptDesk = document.querySelectorAll(".menuOptDesk a");
-const menuOptDeskArray = Array.prototype.slice.call(menuOptDesk);
-let contBordalMenu = 0;
-bordal.classList.add("bordal");
+const menuOptMobile = document.querySelector(".menuOptMobile");
+const notMenu = document.querySelectorAll(".not--menu");
+const notMenuArray = Array.prototype.slice.call(notMenu);
+const menuOptDeskOption = document.querySelectorAll(".menuOptDeskOption");
+const menuOptDeskOptionArray = Array.prototype.slice.call(menuOptDeskOption);
 
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 150) {
     btnMenu.style.backgroundColor = "#1a191a";
     btnMenu.style.boxShadow = "0 0 30px #1a191a77";
-    menuOptDeskArray.map((item) => (item.style.color = "#ffffff"));
   } else {
     btnMenu.style.backgroundColor = "#0D0A0E";
     btnMenu.style.boxShadow = "none";
-    menuOptDeskArray.map((item) => (item.style.color = "#ffffff"));
   }
 });
 
-function mostrarBordal() {
-  if (contBordalMenu >= 2) {
-    contBordalMenu = 0;
-  }
-  contBordalMenu += 1;
+// CONFIG PARA O TOOGLE DA VISIBILITY DO MENU MOBILE
 
-  criarBordalMenu();
-}
+imgMenu.addEventListener("click", () => {
+  // TROCA DO ICON DO MENU
 
-let elements = criarElementosBordal();
+  if (imgMenu.innerText === "menu") imgMenu.innerText = "close";
+  else imgMenu.innerText = "menu";
 
-function criarBordalMenu() {
-  if (contBordalMenu == 1) {
-    // ADICIONAR ITENS AQUI
+  notMenuArray.map((item) => {
+    item.classList.toggle("not--menu");
+  });
+});
 
-    for (let n = 0; n < elements.length; n += 1) {
-      bordal.appendChild(elements[n]);
-    }
-
-    container.style.filter = "blur(5px)";
-    body.style.overflow = "hidden";
-    imgMenu.textContent = "close";
-    body.appendChild(bordal);
-  } else {
-    while (elements.length) {
-      elements.pop();
-      console.log(elements);
-    }
-
-    bordal.remove();
-    imgMenu.textContent = "menu";
-    body.style.overflow = "auto";
-    container.style.filter = "blur(0px)";
-  }
-}
+// CLOSE AFTER CLICK TO OPTIONS MENU MOBILE
 
 window.addEventListener("resize", () => {
-  console.log(window.innerWidth);
-  if (window.innerWidth >= 500) {
-    bordal.remove();
-    imgMenu.textContent = "menu";
-    body.style.overflow = "auto";
-    container.style.filter = "blur(0px)";
+  if (
+    window.innerWidth >= 500 &&
+    notMenuArray[0].classList[1] !== "not--menu"
+  ) {
+    notMenuArray.map((i) => {
+      i.classList.toggle("not--menu");
+      imgMenu.innerText = "menu";
+    });
   }
 });
 
-function criarElementosBordal() {
-  let totalElements = [];
+// CONFIG PARA CLIQUE DA OPÇAO DO MENU FECHAR ELE
 
-  // criar section home
-  const homeElement = document.createElement("a");
-  homeElement.textContent = "HOME";
-  homeElement.href = "#section--home";
-
-  // criar section habilidades
-  const habilidadesElement = document.createElement("a");
-  habilidadesElement.textContent = "HABILIDADES";
-  habilidadesElement.href = "#section--habilidades";
-
-  // criar section projetos
-  const projetosElement = document.createElement("a");
-  projetosElement.textContent = "PROJETOS";
-  projetosElement.href = "#section--projetos";
-
-  // criar section contatos
-  const contatosElement = document.createElement("a");
-  contatosElement.textContent = "CONTATOS";
-  contatosElement.href = "#section--contatos";
-
-  totalElements.push(
-    homeElement,
-    habilidadesElement,
-    projetosElement,
-    contatosElement
-  );
-
-  return totalElements;
-}
-
-imgMenu.addEventListener("click", mostrarBordal);
+menuOptDeskOptionArray.map((item) => {
+  item.addEventListener("click", () => {
+    notMenuArray.map((i) => {
+      i.classList.toggle("not--menu");
+      imgMenu.innerText = "menu";
+    });
+  });
+});

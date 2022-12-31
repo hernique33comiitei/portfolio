@@ -63,13 +63,14 @@ const containerTextContatosPrincipal = document.querySelector(
   ".container__textContatosPrincipal"
 );
 const containerDivItensContatos = document.querySelector(
-  ".container__divItensContatos"
+  ".container__contatos"
 );
 
 const creatContatos = new IntersectionObserver(
   (entrie) => {
     if (entrie[0].isIntersecting == true) {
       containerTextContatosPrincipal.classList.remove("not--view");
+      containerDivItensContatos.classList.remove("not--view");
     }
   },
   {
@@ -100,13 +101,14 @@ arrayInputsCtts.map((e) => {
   e.addEventListener("change", () => {
     arrayInputsCtts.map((e) => {
       let item = e.labels[0];
+
       if (e.checked) {
         item.style.cssText = `
         transform: translateY(-40px);
         background: #8257e6;
         outline: 7px solid #222222;
         border-radius: 50%;
-        transition: all .3s ease;`;
+        `;
       } else {
         item.style.cssText = `
         transform: translateY(0);
