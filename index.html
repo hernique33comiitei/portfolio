@@ -22,9 +22,36 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
 
+    <!-- IMPORT GOOGLE ICONS -->
+
+    <!-- Outlined -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- Filled -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Rounded -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+
+    <!-- Sharp -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <!-- Two tone -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+      rel="stylesheet"
     />
 
     <title>Portfólio | Henrique Oliveira</title>
@@ -44,15 +71,70 @@
 
     <div class="menu">
       <div class="menuOptDesk">
-        <a href="#section--home">Home</a>
-        <a href="#section--habilidades">Habilidades</a>
-        <a href="#section--projetos">Projetos</a>
-        <a href="#section--contatos">Contatos</a>
+        <p class="logoNameOptDesk">Henrique Oliveira</p>
+        <div class="containerOpts">
+          <div class="containerOpt">
+            <input
+              class="menuOptDesk__radio"
+              type="radio"
+              name="radio__menuDesk"
+              id="sec--home"
+              checked
+            />
+            <p class="optionMenuDesk" id="optionDeskHome">
+              <span class="material-icons"> home </span>
+              Home
+            </p>
+          </div>
+
+          <div class="containerOpt">
+            <input
+              class="menuOptDesk__radio"
+              type="radio"
+              name="radio__menuDesk"
+              id="sec--habilidades"
+            />
+            <p class="optionMenuDesk" id="optionDeskHabilidades">
+              <span class="material-icons"> code </span>
+              Habilidades
+            </p>
+          </div>
+
+          <div class="containerOpt">
+            <input
+              class="menuOptDesk__radio"
+              type="radio"
+              name="radio__menuDesk"
+              id="sec--projetos"
+            />
+            <p class="optionMenuDesk" id="optionDeskProjetos">
+              <span class="material-icons-outlined"> inventory </span>
+              Projetos
+            </p>
+          </div>
+
+          <div class="containerOpt">
+            <input
+              class="menuOptDesk__radio"
+              type="radio"
+              name="radio__menuDesk"
+              id="sec--contatos"
+            />
+            <p class="optionMenuDesk" id="optionDeskContatos">
+              <span class="material-icons"> call </span>
+              Contatos
+            </p>
+          </div>
+        </div>
       </div>
+
       <div class="copySucess copySucessNotView">
-        <p>Copiado com Sucesso!! &#128526;</p>
+        <span class="backSucessCopy"></span>
+        <p class="textSucessCopy">Copiado com Sucesso!! &#128526;</p>
+        <span class="material-icons closeSucessCopy"> close </span>
       </div>
-      <span class="material-symbols-outlined menu__image"> menu </span>
+
+      <span class="material-icons menu__image"> menu </span>
       <div class="menuOptMobile not--menu">
         <span class="menuOptMobileBall"></span>
         <span class="menuOptMobileBall"></span>
@@ -155,10 +237,7 @@
         <span class="container__projetosSpanBall"></span>
         <p class="container__textProjetosPrincipal not--view">PROJETOS</p>
 
-        <!--DELETE-->
-        <!-- <div id="container__animationLottie"></div> -->
-
-        <div class="swiper">
+        <div class="swiper not--swiper">
           <div class="swiper-wrapper"></div>
           <div class="swiper-pagination"></div>
         </div>
@@ -190,7 +269,7 @@
                   readonly
                   value="https://github.com/hernique33comiitei"
                 />
-                <span class="material-symbols-outlined"> content_copy </span>
+                <span class="material-icons"> content_copy </span>
               </div>
               <a target="_blank" href="https://github.com/hernique33comiitei"
                 >Ir para Git Hub</a
@@ -213,7 +292,7 @@
               <div class="componentsContatosLink">
                 <input type="text" readonly value="+55 79 9 9916-7112" />
 
-                <span class="material-symbols-outlined"> content_copy </span>
+                <span class="material-icons"> content_copy </span>
               </div>
               <a target="_blank" href="http://wa.me/5579999167112"
                 >Ir para o Whatsapp</a
@@ -239,7 +318,8 @@
                   readonly
                   value="henrique.santos122@academico.ifs.edu.br"
                 />
-                <span class="material-symbols-outlined"> content_copy </span>
+
+                <span class="material-icons"> content_copy </span>
               </div>
             </div>
           </div>
@@ -262,7 +342,7 @@
                   readonly
                   value="https://www.linkedin.com/in/henrique-oliveira-1639a924a/"
                 />
-                <span class="material-symbols-outlined"> content_copy </span>
+                <span class="material-icons"> content_copy </span>
               </div>
               <a
                 target="_blank"

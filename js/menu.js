@@ -54,3 +54,21 @@ menuOptDeskOptionArray.map((item) => {
     });
   });
 });
+
+// REDIRECT SECTION MENU DESK
+
+const optionDeskHome = document.querySelector("#optionDeskHome");
+const optionDeskHabilidades = document.querySelector("#optionDeskHabilidades");
+const optionDeskProjetos = document.querySelector("#optionDeskProjetos");
+const optionDeskContatos = document.querySelector("#optionDeskContatos");
+
+function redirect(itemDom, to) {
+  itemDom.addEventListener("click", () => {
+    window.location.href = to;
+  });
+}
+
+redirect(optionDeskHome, "#section--home");
+redirect(optionDeskHabilidades, "#section--habilidades");
+redirect(optionDeskProjetos, "#section--projetos");
+redirect(optionDeskContatos, "#section--contatos");

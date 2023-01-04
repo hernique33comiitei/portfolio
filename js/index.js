@@ -15,47 +15,85 @@ function mytext() {
   }, 250);
 }
 
-// CONSFIGS PARA EFEITO DE SCROLL
+// ANIMAÇÃO DE COISAS APARECER COM SCROLL DA PAGINA
+
+function scrollAnimates(
+  nameObserver,
+  arrayRemove,
+  nameRemoveClass,
+  sectionChecked,
+  mode
+  // MODE 1 == UMA UNICA CLASSE DIFERENTE PARA RETIRAR
+  // MODE 2 == MAIS DE UMA CLASSE DIFERENTE PARA RETIRAR
+) {
+  let create = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting == true) {
+      sectionChecked.parentElement.children[0].checked = true;
+
+      if (mode === 2) {
+        return arrayRemove.map((item) => {
+          item.nameConst.classList.remove(item.nameClass);
+        });
+      }
+
+      arrayRemove.map((item) => {
+        item.classList.remove(nameRemoveClass);
+      });
+    }
+  });
+
+  create.observe(nameObserver);
+}
+
+// DIV HOME
+
+const containerDivTexts = document.querySelector(
+  ".container__textApresentacao"
+);
+const optionDeskHomeIndex = document.querySelector("#optionDeskHome");
+
+scrollAnimates(containerDivTexts, [], "", optionDeskHomeIndex, 1, []);
 
 // DIV HABILIDADES
+
 const containerTextHabilitsPrincipals = document.querySelector(
   ".container__textHabilitsPrincipal"
 );
 const containerDivComponent = document.querySelector(
   ".container__divComponent"
 );
-
-const creat = new IntersectionObserver(
-  (entrie) => {
-    if (entrie[0].isIntersecting == true) {
-      containerTextHabilitsPrincipals.classList.remove("not--view");
-      containerDivComponent.classList.remove("not--view");
-    }
-  },
-  {
-    threshold: 0.5,
-  }
+const optionDeskHabilidadesIndex = document.querySelector(
+  "#optionDeskHabilidades"
 );
 
-creat.observe(containerDivComponent);
+scrollAnimates(
+  containerTextHabilitsPrincipals,
+  [containerTextHabilitsPrincipals, containerDivComponent],
+  "not--view",
+  optionDeskHabilidadesIndex,
+  1,
+  []
+);
 
 // DIV PROJETOS
+
 const containerTextProjetosPrincipal = document.querySelector(
   ".container__textProjetosPrincipal"
 );
+const swiper = document.querySelector(".swiper");
+const arrayRemoveProjetos = [
+  { nameConst: containerTextProjetosPrincipal, nameClass: "not--view" },
+  { nameConst: swiper, nameClass: "not--swiper" },
+];
+const optionDeskProjetosIndex = document.querySelector("#optionDeskProjetos");
 
-const creatProjetos = new IntersectionObserver(
-  (entrie) => {
-    if (entrie[0].isIntersecting == true) {
-      containerTextProjetosPrincipal.classList.remove("not--view");
-    }
-  },
-  {
-    threshold: 1,
-  }
+scrollAnimates(
+  containerTextProjetosPrincipal,
+  arrayRemoveProjetos,
+  "",
+  optionDeskProjetosIndex,
+  2
 );
-
-creatProjetos.observe(containerTextProjetosPrincipal);
 
 // DIV CONTATOS
 
@@ -65,20 +103,15 @@ const containerTextContatosPrincipal = document.querySelector(
 const containerDivItensContatos = document.querySelector(
   ".container__contatos"
 );
+const optionDeskContatosIndex = document.querySelector("#optionDeskContatos");
 
-const creatContatos = new IntersectionObserver(
-  (entrie) => {
-    if (entrie[0].isIntersecting == true) {
-      containerTextContatosPrincipal.classList.remove("not--view");
-      containerDivItensContatos.classList.remove("not--view");
-    }
-  },
-  {
-    threshold: 0.5,
-  }
+scrollAnimates(
+  containerTextContatosPrincipal,
+  [containerTextContatosPrincipal, containerDivItensContatos],
+  "not--view",
+  optionDeskContatosIndex,
+  1
 );
-
-creatContatos.observe(containerTextContatosPrincipal);
 
 // CONFIGS PARA A ANIMACAO DE MEIO DE CONTATO SELECIONADO
 
@@ -152,16 +185,49 @@ arrayNodeDivCttLink.map((e) => {
 // MENSAGEM DE SUCESSO
 
 const iconesCopy = document.querySelectorAll(
-  ".componentsContatosLink .material-symbols-outlined"
+  ".componentsContatosLink .material-icons"
 );
 const arrayIconesCopy = Array.prototype.slice.call(iconesCopy);
 const msgSucess = document.querySelector(".copySucessNotView");
+const closeSucessCopy = document.querySelector(".closeSucessCopy");
+let timeCopyProgres;
+let timeoutCopySucess;
+let stateRuning;
+let porcentoTimeCopy;
 
 arrayIconesCopy.map((e) => {
   e.addEventListener("click", () => {
-    msgSucess.classList.toggle("copySucessNotView");
-    setTimeout(() => {
+    msgSucess.classList.remove("copySucessNotView");
+
+    if (stateRuning === true) {
+      return true;
+    }
+
+    stateRuning = true;
+
+    porcentoTimeCopy = 100;
+    timeCopyProgres = setInterval(() => {
+      document.documentElement.style.setProperty(
+        "--porcentBarCopy",
+        `${porcentoTimeCopy}%`
+      );
+      porcentoTimeCopy -= 4;
+    }, 100);
+
+    timeoutCopySucess = setTimeout(() => {
+      stateRuning = false;
       msgSucess.classList.toggle("copySucessNotView");
+      clearInterval(timeCopyProgres);
+      porcentoTimeCopy = 100;
     }, 3000);
   });
+});
+
+// CLOSE MENSAGE SUCESS
+closeSucessCopy.addEventListener("click", () => {
+  porcentoTimeCopy = 100;
+  msgSucess.classList.add("copySucessNotView");
+  clearInterval(timeCopyProgres);
+  clearTimeout(timeoutCopySucess);
+  stateRuning = false;
 });
