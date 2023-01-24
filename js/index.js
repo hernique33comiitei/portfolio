@@ -15,6 +15,22 @@ function mytext() {
   }, 250);
 }
 
+// CONFIG PARA TROCAR O TAMANHO DO
+// FUNDO DA MINHA LOGO NA PAGINA ININCIAL =>
+
+const imageContainerFronEnd = document.querySelector(
+  ".container__imagemFrontEnd img"
+);
+
+function reziseBackgroundImageFrontEnd() {
+  document.body.style.setProperty(
+    "--width-imageBackgroundFrontEnd",
+    `${imageContainerFronEnd.clientWidth}px`
+  );
+}
+
+window.addEventListener("resize", reziseBackgroundImageFrontEnd);
+
 // ANIMAÇÃO DE COISAS APARECER COM SCROLL DA PAGINA
 
 function scrollAnimates(
@@ -126,11 +142,6 @@ arrayInputsCtts.map((e) => {
     item.style.cssText = `
     transform: translateY(-40px);
     background: #8257e6;
-    backdrop-filter: blur(17px) saturate(87%);
-    -webkit-backdrop-filter: blur(17px) saturate(87%);
-    background-color: rgba(130, 87, 230, 0.38);
-    border-radius: 12px;
-
     outline: 7px solid #222222;
     border-radius: 50%;
     `;
@@ -143,10 +154,7 @@ arrayInputsCtts.map((e) => {
       if (e.checked) {
         item.style.cssText = `
         transform: translateY(-40px);
-        backdrop-filter: blur(17px) saturate(87%);
-        -webkit-backdrop-filter: blur(17px) saturate(87%);
-        background-color: rgba(130, 87, 230, 0.38);
-        border-radius: 12px;
+        background: #8257e6;
         outline: 7px solid #222222;
         border-radius: 50%;
         `;
@@ -200,7 +208,7 @@ arrayIconesCopy.map((e) => {
     msgSucess.classList.remove("copySucessNotView");
 
     if (stateRuning === true) {
-      return true;
+      return;
     }
 
     stateRuning = true;
@@ -219,13 +227,17 @@ arrayIconesCopy.map((e) => {
       msgSucess.classList.toggle("copySucessNotView");
       clearInterval(timeCopyProgres);
       porcentoTimeCopy = 100;
-    }, 3000);
+    }, 2750);
   });
 });
 
 // CLOSE MENSAGE SUCESS
 closeSucessCopy.addEventListener("click", () => {
   porcentoTimeCopy = 100;
+  document.documentElement.style.setProperty(
+    "--porcentBarCopy",
+    `${porcentoTimeCopy}%`
+  );
   msgSucess.classList.add("copySucessNotView");
   clearInterval(timeCopyProgres);
   clearTimeout(timeoutCopySucess);

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/mqIndex.css" />
     <link rel="stylesheet" href="css/load.css" />
+    <link rel="stylesheet" href="css/colorsSkills.css" />
     <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon" />
 
     <link
@@ -56,7 +57,7 @@
 
     <title>Portfólio | Henrique Oliveira</title>
   </head>
-  <body onload="mytext(), loading()">
+  <body onload="mytext(), loading(), reziseBackgroundImageFrontEnd()">
     <!-- BORDAL DE LOANDING -->
 
     <div class="loading">
@@ -71,7 +72,10 @@
 
     <div class="menu">
       <div class="menuOptDesk">
-        <p class="logoNameOptDesk">Henrique Oliveira</p>
+        <p class="logoNameOptDesk">
+          <img src="img/myLogo.png" alt="Minha Logo" />
+          Henrique Oliveira
+        </p>
         <div class="containerOpts">
           <div class="containerOpt">
             <input
@@ -81,10 +85,7 @@
               id="sec--home"
               checked
             />
-            <p class="optionMenuDesk" id="optionDeskHome">
-              <span class="material-icons"> home </span>
-              Home
-            </p>
+            <p class="optionMenuDesk" id="optionDeskHome">Home</p>
           </div>
 
           <div class="containerOpt">
@@ -94,10 +95,7 @@
               name="radio__menuDesk"
               id="sec--habilidades"
             />
-            <p class="optionMenuDesk" id="optionDeskHabilidades">
-              <span class="material-icons"> code </span>
-              Habilidades
-            </p>
+            <p class="optionMenuDesk" id="optionDeskHabilidades">Habilidades</p>
           </div>
 
           <div class="containerOpt">
@@ -107,10 +105,7 @@
               name="radio__menuDesk"
               id="sec--projetos"
             />
-            <p class="optionMenuDesk" id="optionDeskProjetos">
-              <span class="material-icons-outlined"> inventory </span>
-              Projetos
-            </p>
+            <p class="optionMenuDesk" id="optionDeskProjetos">Projetos</p>
           </div>
 
           <div class="containerOpt">
@@ -120,10 +115,7 @@
               name="radio__menuDesk"
               id="sec--contatos"
             />
-            <p class="optionMenuDesk" id="optionDeskContatos">
-              <span class="material-icons"> call </span>
-              Contatos
-            </p>
+            <p class="optionMenuDesk" id="optionDeskContatos">Contatos</p>
           </div>
         </div>
       </div>
@@ -135,6 +127,8 @@
       </div>
 
       <span class="material-icons menu__image"> menu </span>
+      <img class="menu__myLogo" src="img/myLogo.png" alt="Minha Logo" />
+
       <div class="menuOptMobile not--menu">
         <span class="menuOptMobileBall"></span>
         <span class="menuOptMobileBall"></span>
@@ -151,15 +145,24 @@
             >Contatos</a
           >
         </div>
-        <p class="menuMobileTextBemVindo">Bem Vindo &#128153;</p>
+        <div class="menuMobileContatosDiv">
+          <a href="https://github.com/hernique33comiitei" target="_blank">
+            <img src="icons/git-hub-icon.png" alt="Icone GitHub" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/henrique-oliveira-1639a924a/"
+            target="_blank"
+          >
+            <img src="icons/linkdin-icon.png" alt="Icone LinkedIn" />
+          </a>
+        </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="container__home">
-        <div class="container__divTexts" id="section--home">
+      <div class="container__home" id="section--home">
+        <div class="container__divTexts">
           <div class="container__textInit">
-            <p class="container__textPorti">PORTFÓLIO</p>
             <p class="container__textMyName">H</p>
             <p class="container__textSecund">FULL STACK WEB DEVELOPER</p>
           </div>
@@ -179,7 +182,9 @@
             </p>
           </div>
         </div>
-        <div class="container__imagemFrontEnd"></div>
+        <div class="container__imagemFrontEnd">
+          <img src="img/myLogo.png" alt="Minha Logo" />
+        </div>
       </div>
 
       <!-- PARTE DAS HABILIDADES -->
@@ -388,7 +393,7 @@
         </div>
         <div class="container__footerBy">
           <p>Copyright © | Coded with</p>
-          <img src="img/logo-compt.png" alt="My logotipo" />
+          <img src="img/myLogo.png" alt="My logotipo" />
         </div>
       </div>
     </div>

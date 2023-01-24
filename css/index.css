@@ -16,9 +16,7 @@
   --fundo2: #222222;
   --afterProjects: #39303c;
   --text-contatos: #cccccc;
-  --height: 100vh;
   --btnColor: #0d0a0c;
-
   --react: #61dafb;
   --html: #e44d26;
   --css: #1572b6;
@@ -38,6 +36,7 @@ body {
   background-color: var(--fundo);
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
+  min-width: 300px;
 }
 
 /* CONFIGS PARA O CONTAINER */
@@ -52,13 +51,13 @@ body {
     "contatos contatos"
     "footer footer";
   grid-template-columns: 80% 20%;
-  max-width: 2000px;
+  max-width: 1500px;
   overflow-x: hidden;
 }
 
 .container__home {
   grid-area: home;
-  height: var(--height);
+  height: 600px;
   display: flex;
 }
 
@@ -67,16 +66,36 @@ body {
   gap: 20px;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
+  padding: 50px;
+  width: 50%;
 }
 
 .container__imagemFrontEnd {
-  width: 20%;
-  background-image: url("../img/img-first-pagina.png");
-  background-position: right center;
-  background-size: contain;
-  background-repeat: repeat-y;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
   height: 100%;
+  position: relative;
+}
+
+.container__imagemFrontEnd::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/backLogo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: var(--width-imageBackgroundFrontEnd);
+  filter: blur(60px);
+  z-index: -1;
+}
+
+.container__imagemFrontEnd > img {
+  width: 60%;
+  max-width: 350px;
+  filter: drop-shadow(0 10px 10px #00000033);
 }
 
 /* CONFIGS PARA O CONTAINER DOS TEXTOS */
@@ -85,20 +104,21 @@ body {
   width: 100%;
 }
 
-.container__textPorti {
-  font-size: 1.3em;
-  line-height: 1em;
-}
-
 .container__textMyName {
-  font-size: 2.5em;
+  font-size: clamp(35px, 2vw, 60px);
   line-height: 1em;
   font-weight: 700;
-  color: var(--versio-blue);
+
+  background: linear-gradient(to bottom right, #bc82ff 6%, #8257e6 52%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #8257e6;
 }
 
 .container__textSecund {
-  font-size: 1.8em;
+  font-size: clamp(25px, 2vw, 43px);
+
   line-height: 1em;
   font-weight: 600;
 }
@@ -148,41 +168,44 @@ body {
   justify-content: center;
   align-self: flex-start;
   align-items: center;
-  background: linear-gradient(91.96deg, #8257e6 0%, #1e0c24 100%);
-  border-radius: 50px;
-  padding: 5px;
   cursor: pointer;
-  box-shadow: inset 0 0 30px #8257e6;
+  padding: 3px;
+  background: #8257e6;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 50px;
+  border: 1px solid #ffffff3a;
 }
 
 /* ANIMAÇÕES PARA O BTN */
 
 .container__btn:hover {
-  transform: scale(0.9);
-  opacity: 70%;
+  background: #9d7fe3;
+  transform: translateY(-3px);
 }
 
-.container__btn a,
-.container__btn p {
+.container__btn a {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-weight: 600;
-  color: #ffffff;
   background-color: var(--btnColor);
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 600;
+  color: #ffffffdc;
   border-radius: 50px;
-  padding: 5px 15px;
+  padding: 7px 12px;
 }
 
 /* CONFIGS PARA O TEXTO SOBRE MIM */
 
 .container__textApresentacao {
-  width: 60%;
+  width: 100%;
+  max-width: 530px;
+  color: #d0c6c6;
 }
 
 .container__textApresentacao span {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--versio-blue);
 }
 
@@ -190,7 +213,7 @@ body {
 
 .container__habilidades {
   grid-area: habilit;
-  height: var(--height);
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -224,7 +247,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 0 10px;
+  padding: 0 30px;
 }
 
 .container__component {
@@ -243,64 +266,6 @@ body {
   height: 10px;
   background-color: var(--versio-blue);
   border-radius: 0 0 15px 15px;
-}
-
-/* CONFIGS PARA AS CORES DAS HABILIDADES */
-
-.react:hover {
-  outline: 3px solid var(--react) !important;
-}
-
-.react::after {
-  background-color: var(--react) !important;
-}
-
-.html:hover {
-  outline: 3px solid var(--html) !important;
-}
-
-.html::after {
-  background-color: var(--html) !important;
-}
-
-.css:hover {
-  outline: 3px solid var(--css) !important;
-}
-
-.css::after {
-  background-color: var(--css) !important;
-}
-
-.js:hover {
-  outline: 3px solid var(--js) !important;
-}
-
-.js::after {
-  background-color: var(--js) !important;
-}
-
-.python:hover {
-  outline: 3px solid var(--python) !important;
-}
-
-.python::after {
-  background-color: var(--python) !important;
-}
-
-.django:hover {
-  outline: 3px solid var(--django) !important;
-}
-
-.django::after {
-  background-color: var(--django) !important;
-}
-
-.mysql:hover {
-  outline: 3px solid var(--mysql) !important;
-}
-
-.mysql::after {
-  background-color: var(--mysql) !important;
 }
 
 /* END CONFIGS PARA AS CORES DAS HABILIDADES */
@@ -323,7 +288,7 @@ body {
 .container__component:hover {
   cursor: pointer;
   outline: 3px solid #8257e6;
-  transform: scale(1.1);
+  transform: translateY(-7px);
   filter: grayscale(0);
 }
 
@@ -332,7 +297,7 @@ body {
 .container__projetos {
   position: relative;
   grid-area: projetos;
-  height: var(--height);
+  height: 800px;
   display: flex;
   gap: 40px;
   flex-direction: column;
@@ -361,14 +326,14 @@ body {
   right: -50px;
 }
 
-/* CONFIGS PARA A DIV CONTANTOS */
+/* CONFIGS PARA A DIV CONTATOS */
 
 .container__divContatos {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: var(--height);
+  height: 700px;
   grid-area: contatos;
 }
 
@@ -551,7 +516,8 @@ body {
   grid-area: footer;
   width: 100%;
   height: 100px;
-  background-color: #8257e615;
+  /* background-color: #8257e615; */
+  border-top: 2.7px solid #8257e615;
 }
 
 .container__footerBy {

@@ -8,12 +8,16 @@ const menuOptDeskOption = document.querySelectorAll(".menuOptDeskOption");
 const menuOptDeskOptionArray = Array.prototype.slice.call(menuOptDeskOption);
 
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 150) {
-    btnMenu.style.backgroundColor = "#1a191a";
-    btnMenu.style.boxShadow = "0 0 30px #1a191a77";
+  if (window.pageYOffset > 120) {
+    btnMenu.style.cssText += `
+      background: rgba( 34, 30, 34, 0.4 );
+      box-shadow: 5px 0 32px 0 rgba( 34, 30, 34, .3 );
+      -webkit-backdrop-filter: blur( 13px );`;
   } else {
-    btnMenu.style.backgroundColor = "#0D0A0E";
-    btnMenu.style.boxShadow = "none";
+    btnMenu.style.cssText += `
+      background: #0d0a0e;
+      box-shadow: 0 0 0 0 transparent;
+      -webkit-backdrop-filter: blur( 0 );`;
   }
 });
 
@@ -24,6 +28,8 @@ imgMenu.addEventListener("click", () => {
 
   if (imgMenu.innerText === "menu") imgMenu.innerText = "close";
   else imgMenu.innerText = "menu";
+
+  console.log(notMenu);
 
   notMenuArray.map((item) => {
     item.classList.toggle("not--menu");

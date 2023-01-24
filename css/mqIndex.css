@@ -1,18 +1,3 @@
-/* CONFIGS PARA A ALTURA */
-
-@media (max-height: 700px) {
-  .container {
-    min-height: 2500px !important;
-  }
-
-  .container__home,
-  .container__habilidades,
-  .container__projetos,
-  .container__divContatos {
-    min-height: 700px;
-  }
-}
-
 /* CONFIGS PARA A LARGURA */
 
 @media (max-width: 320px) {
@@ -26,13 +11,29 @@
     width: 100%;
   }
 
-  .container__textMyName,
-  .container__textSecund {
-    word-break: break-all;
-  }
-
   .container__btn a {
     font-size: 5vw;
+  }
+}
+
+/*MEDIA QUERY PARA TROCAR O STILO DO MENU*/
+
+@media (max-width: 500px) {
+  .menu {
+    border-bottom: 2.7px solid #8257e615;
+    flex-direction: row-reverse;
+  }
+
+  .menu__image {
+    display: block !important;
+  }
+
+  .menu__myLogo {
+    display: block !important;
+  }
+
+  .menuOptDesk {
+    display: none;
   }
 }
 
@@ -55,12 +56,26 @@
 }
 
 @media (max-width: 700px) {
-  .container__imagemFrontEnd {
-    display: none;
+  .container__home {
+    height: 700px;
+    flex-direction: column-reverse;
+    justify-content: center;
   }
 
-  .container__textApresentacao {
-    width: 80%;
+  .container__imagemFrontEnd,
+  .container__divTexts {
+    padding: 0 30px;
+    height: auto;
+    width: 100%;
+  }
+
+  .container__divTexts {
+    align-items: center;
+    text-align: center;
+  }
+
+  .container__btn {
+    align-self: auto;
   }
 
   .container__textInit {
@@ -75,42 +90,12 @@
     display: block;
   }
 
-  .container__projetos {
-    gap: 40px;
-  }
-
-  .container__divProjetosOn,
-  .container__divProjetosNone {
-    flex-direction: column;
-    align-content: center;
-    width: 100%;
-  }
-
   .container__projeto {
+    gap: 40px;
     width: 100%;
   }
 
   .container__projeto:hover {
     transform: scale(1.1);
-  }
-}
-
-/* CONFIGS PARA TROCAR FLEX DIRECTION DOS BTNS AFTER LINK */
-
-@media (max-width: 1000px) {
-  .container__divProjetosOn,
-  .container__divProjetosNone {
-    grid-template-columns: repeat(2, 40%);
-  }
-}
-
-@media (max-width: 750px) {
-  .container__divProjetosOn,
-  .container__divProjetosNone {
-    grid-template-columns: repeat(1, 100%);
-  }
-
-  .container__projeto {
-    max-width: 400px;
   }
 }

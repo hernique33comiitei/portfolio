@@ -1,0 +1,57 @@
+/* CONFIGS PARA AS CORES DAS HABILIDADES */
+
+.react:hover {
+  outline: 3px solid var(--react) !important;
+}
+
+.react::after {
+  background-color: var(--react) !important;
+}
+
+.html:hover {
+  outline: 3px solid var(--html) !important;
+}
+
+.html::after {
+  background-color: var(--html) !important;
+}
+
+.css:hover {
+  outline: 3px solid var(--css) !important;
+}
+
+.css::after {
+  background-color: var(--css) !important;
+}
+
+.js:hover {
+  outline: 3px solid var(--js) !important;
+}
+
+.js::after {
+  background-color: var(--js) !important;
+}
+
+.python:hover {
+  outline: 3px solid var(--python) !important;
+}
+
+.python::after {
+  background-color: var(--python) !important;
+}
+
+.django:hover {
+  outline: 3px solid var(--django) !important;
+}
+
+.django::after {
+  background-color: var(--django) !important;
+}
+
+.mysql:hover {
+  outline: 3px solid var(--mysql) !important;
+}
+
+.mysql::after {
+  background-color: var(--mysql) !important;
+}
