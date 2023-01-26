@@ -36,9 +36,17 @@ imgMenu.addEventListener("click", () => {
   });
 });
 
+// ATUALIZAR O O WIDTH DO MENU {POIS POSITION FIXED DENTRO DE UM GRID BUGA}
+
+function widthMenuGeneral() {
+  let containerWidth = container.clientWidth;
+  document.body.style.setProperty("--width-menu", `${containerWidth}px`);
+}
+
 // CLOSE AFTER CLICK TO OPTIONS MENU MOBILE
 
 window.addEventListener("resize", () => {
+  widthMenuGeneral();
   if (
     window.innerWidth >= 500 &&
     notMenuArray[0].classList[1] !== "not--menu"

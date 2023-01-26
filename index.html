@@ -7,9 +7,10 @@
 
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/menu.css" />
-    <link rel="stylesheet" href="css/mqIndex.css" />
     <link rel="stylesheet" href="css/load.css" />
     <link rel="stylesheet" href="css/colorsSkills.css" />
+    <link rel="stylesheet" href="css/animationArrow.css" />
+    <link rel="stylesheet" href="css/mqIndex.css" />
     <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon" />
 
     <link
@@ -57,7 +58,9 @@
 
     <title>Portfólio | Henrique Oliveira</title>
   </head>
-  <body onload="mytext(), loading(), reziseBackgroundImageFrontEnd()">
+  <body
+    onload="mytext(), loading(), reziseBackgroundImageFrontEnd(), widthMenuGeneral()"
+  >
     <!-- BORDAL DE LOANDING -->
 
     <div class="loading">
@@ -70,96 +73,99 @@
 
     <!-- MENU -->
 
-    <div class="menu">
-      <div class="menuOptDesk">
-        <p class="logoNameOptDesk">
-          <img src="img/myLogo.png" alt="Minha Logo" />
-          Henrique Oliveira
-        </p>
-        <div class="containerOpts">
-          <div class="containerOpt">
-            <input
-              class="menuOptDesk__radio"
-              type="radio"
-              name="radio__menuDesk"
-              id="sec--home"
-              checked
-            />
-            <p class="optionMenuDesk" id="optionDeskHome">Home</p>
-          </div>
-
-          <div class="containerOpt">
-            <input
-              class="menuOptDesk__radio"
-              type="radio"
-              name="radio__menuDesk"
-              id="sec--habilidades"
-            />
-            <p class="optionMenuDesk" id="optionDeskHabilidades">Habilidades</p>
-          </div>
-
-          <div class="containerOpt">
-            <input
-              class="menuOptDesk__radio"
-              type="radio"
-              name="radio__menuDesk"
-              id="sec--projetos"
-            />
-            <p class="optionMenuDesk" id="optionDeskProjetos">Projetos</p>
-          </div>
-
-          <div class="containerOpt">
-            <input
-              class="menuOptDesk__radio"
-              type="radio"
-              name="radio__menuDesk"
-              id="sec--contatos"
-            />
-            <p class="optionMenuDesk" id="optionDeskContatos">Contatos</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="copySucess copySucessNotView">
-        <span class="backSucessCopy"></span>
-        <p class="textSucessCopy">Copiado com Sucesso!! &#128526;</p>
-        <span class="material-icons closeSucessCopy"> close </span>
-      </div>
-
-      <span class="material-icons menu__image"> menu </span>
-      <img class="menu__myLogo" src="img/myLogo.png" alt="Minha Logo" />
-
-      <div class="menuOptMobile not--menu">
-        <span class="menuOptMobileBall"></span>
-        <span class="menuOptMobileBall"></span>
-        <div class="backMenu not--menu"></div>
-        <div class="menuOptlinks">
-          <a class="menuOptDeskOption not--menu" href="#section--home">Home</a>
-          <a class="menuOptDeskOption not--menu" href="#section--habilidades"
-            >Habilidades</a
-          >
-          <a class="menuOptDeskOption not--menu" href="#section--projetos"
-            >Projetos</a
-          >
-          <a class="menuOptDeskOption not--menu" href="#section--contatos"
-            >Contatos</a
-          >
-        </div>
-        <div class="menuMobileContatosDiv">
-          <a href="https://github.com/hernique33comiitei" target="_blank">
-            <img src="icons/git-hub-icon.png" alt="Icone GitHub" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/henrique-oliveira-1639a924a/"
-            target="_blank"
-          >
-            <img src="icons/linkdin-icon.png" alt="Icone LinkedIn" />
-          </a>
-        </div>
-      </div>
-    </div>
-
     <div class="container">
+      <div class="menu">
+        <div class="menuOptDesk">
+          <p class="logoNameOptDesk">
+            <img src="img/myLogo.png" alt="Minha Logo" />
+            Henrique Oliveira
+          </p>
+          <div class="containerOpts">
+            <div class="containerOpt">
+              <input
+                class="menuOptDesk__radio"
+                type="radio"
+                name="radio__menuDesk"
+                id="sec--home"
+                checked
+              />
+              <p class="optionMenuDesk" id="optionDeskHome">Home</p>
+            </div>
+
+            <div class="containerOpt">
+              <input
+                class="menuOptDesk__radio"
+                type="radio"
+                name="radio__menuDesk"
+                id="sec--habilidades"
+              />
+              <p class="optionMenuDesk" id="optionDeskHabilidades">
+                Habilidades
+              </p>
+            </div>
+
+            <div class="containerOpt">
+              <input
+                class="menuOptDesk__radio"
+                type="radio"
+                name="radio__menuDesk"
+                id="sec--projetos"
+              />
+              <p class="optionMenuDesk" id="optionDeskProjetos">Projetos</p>
+            </div>
+
+            <div class="containerOpt">
+              <input
+                class="menuOptDesk__radio"
+                type="radio"
+                name="radio__menuDesk"
+                id="sec--contatos"
+              />
+              <p class="optionMenuDesk" id="optionDeskContatos">Contatos</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="copySucess copySucessNotView">
+          <span class="backSucessCopy"></span>
+          <p class="textSucessCopy">Copiado com Sucesso!! &#128526;</p>
+          <span class="material-icons closeSucessCopy"> close </span>
+        </div>
+
+        <span class="material-icons menu__image"> menu </span>
+        <img class="menu__myLogo" src="img/myLogo.png" alt="Minha Logo" />
+
+        <div class="menuOptMobile not--menu">
+          <span class="menuOptMobileBall"></span>
+          <span class="menuOptMobileBall"></span>
+          <div class="backMenu not--menu"></div>
+          <div class="menuOptlinks">
+            <a class="menuOptDeskOption not--menu" href="#section--home"
+              >Home</a
+            >
+            <a class="menuOptDeskOption not--menu" href="#section--habilidades"
+              >Habilidades</a
+            >
+            <a class="menuOptDeskOption not--menu" href="#section--projetos"
+              >Projetos</a
+            >
+            <a class="menuOptDeskOption not--menu" href="#section--contatos"
+              >Contatos</a
+            >
+          </div>
+          <div class="menuMobileContatosDiv">
+            <a href="https://github.com/hernique33comiitei" target="_blank">
+              <img src="icons/git-hub-icon.png" alt="Icone GitHub" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/henrique-oliveira-1639a924a/"
+              target="_blank"
+            >
+              <img src="icons/linkdin-icon.png" alt="Icone LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="container__home" id="section--home">
         <div class="container__divTexts">
           <div class="container__textInit">
@@ -183,7 +189,57 @@
           </div>
         </div>
         <div class="container__imagemFrontEnd">
-          <img src="img/myLogo.png" alt="Minha Logo" />
+          <div class="divContainerimagemFrontEnd">
+            <span class="ballsBackContainerFront"></span>
+            <span class="ballsBackContainerFront"></span>
+            <span class="ballsBackContainerFront"></span>
+            <img src="img/myLogo.png" alt="Minha Logo" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ANIMATION ARROW -->
+
+      <div class="divAnimationArrow">
+        <div class="textDivAnimationILoveCodar">
+          <p class="textAnimationParagraph not--textAnimationParagraph">
+            i
+            <span class="material-icons favoriteBorder"> favorite_border </span>
+            <span class="material-icons favorite"> favorite </span>
+            codar
+          </p>
+        </div>
+        <div class="animationArrow">
+          <span class="barArrow not--animationArrow"></span>
+          <span
+            class="material-icons-outlined spanIconAnimationArrow not--animationArrow"
+          >
+            code
+          </span>
+          <span class="barArrow not--animationArrow"></span>
+        </div>
+
+        <div class="divTextAnimationArrow">
+          <div class="textAnimationArrow not--textAnimationArrow">
+            <div class="squareBack"></div>
+            <div class="squareBack"></div>
+            <p class="textAnimationArrowMyName">Henrique Oliveira</p>
+            <div class="divComponentTextAnimationArrow">
+              <div class="componentTextAnimationArrowTitle">
+                <span>+</span>
+                <p>1</p>
+              </div>
+              <p class="descTextAnimationArrow">+ de 1 ano na área</p>
+            </div>
+            <div class="divComponentTextAnimationArrow">
+              <div class="componentTextAnimationArrowTitle">
+                <span class="material-icons"> local_cafe </span>
+                <p>0</p>
+              </div>
+              <p class="descTextAnimationArrow">xícaras de café tomadas</p>
+            </div>
+            <div class="endTextAnimationArrow"></div>
+          </div>
         </div>
       </div>
 

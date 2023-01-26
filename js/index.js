@@ -39,24 +39,30 @@ function scrollAnimates(
   nameRemoveClass,
   sectionChecked,
   mode
+
   // MODE 1 == UMA UNICA CLASSE DIFERENTE PARA RETIRAR
   // MODE 2 == MAIS DE UMA CLASSE DIFERENTE PARA RETIRAR
 ) {
-  let create = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting == true) {
-      sectionChecked.parentElement.children[0].checked = true;
+  let create = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting == true) {
+        sectionChecked.parentElement.children[0].checked = true;
 
-      if (mode === 2) {
-        return arrayRemove.map((item) => {
-          item.nameConst.classList.remove(item.nameClass);
+        if (mode === 2) {
+          return arrayRemove.map((item) => {
+            item.nameConst.classList.remove(item.nameClass);
+          });
+        }
+
+        arrayRemove.map((item) => {
+          item.classList.remove(nameRemoveClass);
         });
       }
-
-      arrayRemove.map((item) => {
-        item.classList.remove(nameRemoveClass);
-      });
+    },
+    {
+      threshold: 0.6,
     }
-  });
+  );
 
   create.observe(nameObserver);
 }
@@ -69,6 +75,41 @@ const containerDivTexts = document.querySelector(
 const optionDeskHomeIndex = document.querySelector("#optionDeskHome");
 
 scrollAnimates(containerDivTexts, [], "", optionDeskHomeIndex, 1, []);
+
+// ANIMATION ARROW
+
+const notAnimationArrow = document.querySelectorAll(".not--animationArrow");
+const notTextAnimationArrow = document.querySelector(
+  ".not--textAnimationArrow"
+);
+
+scrollAnimates(
+  notAnimationArrow[0],
+  Array.from(notAnimationArrow),
+  "not--animationArrow",
+  optionDeskHomeIndex,
+  1
+);
+
+scrollAnimates(
+  notAnimationArrow[0],
+  [notTextAnimationArrow],
+  "not--textAnimationArrow",
+  optionDeskHomeIndex,
+  1
+);
+
+const textAnimationParagraph = document.querySelector(
+  ".textAnimationParagraph"
+);
+
+scrollAnimates(
+  textAnimationParagraph,
+  [textAnimationParagraph],
+  "not--textAnimationParagraph",
+  optionDeskHomeIndex,
+  1
+);
 
 // DIV HABILIDADES
 
@@ -87,8 +128,7 @@ scrollAnimates(
   [containerTextHabilitsPrincipals, containerDivComponent],
   "not--view",
   optionDeskHabilidadesIndex,
-  1,
-  []
+  1
 );
 
 // DIV PROJETOS

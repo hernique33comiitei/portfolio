@@ -16,6 +16,26 @@
   }
 }
 
+@media (max-width: 400px) {
+  .ballsBackContainerFront:nth-child(1) {
+    top: -10px;
+    left: -10px;
+    height: 50px !important;
+    width: 50px !important;
+  }
+
+  .ballsBackContainerFront:nth-child(2) {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  .ballsBackContainerFront:nth-child(3) {
+    border-left: 20px solid transparent !important;
+    border-right: 10px solid transparent !important;
+    border-bottom: 30px solid #1574b774 !important;
+  }
+}
+
 /*MEDIA QUERY PARA TROCAR O STILO DO MENU*/
 
 @media (max-width: 500px) {
@@ -34,6 +54,34 @@
 
   .menuOptDesk {
     display: none;
+  }
+
+  /* TROCA DO GRID DA ANIMATION ARROW */
+
+  .textAnimationArrow {
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 40% 40% 5%;
+  }
+
+  .textAnimationArrowMyName,
+  .endTextAnimationArrow {
+    grid-column: auto;
+  }
+
+  .componentTextAnimationArrowTitle {
+    font-size: clamp(20px, 40px, 60px);
+  }
+
+  .squareBack {
+    top: -20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .squareBack:nth-child(2) {
+    left: auto;
+    right: 0;
+    transform: translateX(0);
   }
 }
 
@@ -60,6 +108,7 @@
     height: 700px;
     flex-direction: column-reverse;
     justify-content: center;
+    gap: 20px;
   }
 
   .container__imagemFrontEnd,
@@ -85,6 +134,12 @@
   }
 }
 
+@media (min-height: 850px) {
+  .optionMenuDesk::after {
+    display: none;
+  }
+}
+
 @media (max-width: 920px) {
   body {
     display: block;
@@ -97,5 +152,21 @@
 
   .container__projeto:hover {
     transform: scale(1.1);
+  }
+
+  .ballsBackContainerFront:nth-child(1) {
+    height: clamp(60px, 70px, 90px);
+    width: clamp(60px, 70px, 90px);
+  }
+
+  .ballsBackContainerFront:nth-child(2) {
+    height: clamp(40px, 50px, 60px);
+    width: clamp(40px, 50px, 60px);
+  }
+
+  .ballsBackContainerFront:nth-child(3) {
+    border-left: clamp(10px, 20px, 30px) solid transparent;
+    border-right: clamp(1px, 5px, 10px) solid transparent;
+    border-bottom: clamp(20px, 30px, 40px) solid #1574b774;
   }
 }

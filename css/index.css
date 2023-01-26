@@ -16,6 +16,8 @@
   --fundo2: #222222;
   --afterProjects: #39303c;
   --text-contatos: #cccccc;
+  --text-zinc1: #696969;
+  --text-zinc2: #bfb6b6;
   --btnColor: #0d0a0c;
   --react: #61dafb;
   --html: #e44d26;
@@ -46,6 +48,7 @@ body {
   width: 100%;
   grid-template-areas:
     "home home"
+    "arrow arrow"
     "habilit habilit"
     "projetos projetos"
     "contatos contatos"
@@ -59,6 +62,7 @@ body {
   grid-area: home;
   height: 600px;
   display: flex;
+  margin-top: 50px; /*MARGIN DO TAMANHO DO MENU*/
 }
 
 .container__divTexts {
@@ -79,7 +83,16 @@ body {
   position: relative;
 }
 
-.container__imagemFrontEnd::before {
+.divContainerimagemFrontEnd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: auto;
+  position: relative;
+}
+
+.divContainerimagemFrontEnd::before {
   position: absolute;
   content: " ";
   width: 100%;
@@ -92,10 +105,86 @@ body {
   z-index: -1;
 }
 
-.container__imagemFrontEnd > img {
-  width: 60%;
+.container__imagemFrontEnd img {
+  width: 100%;
   max-width: 350px;
   filter: drop-shadow(0 10px 10px #00000033);
+  animation: logoFloat 8s ease infinite alternate;
+}
+
+@keyframes logoFloat {
+  to {
+    transform: translateY(-20px) rotate(5deg) scale(1.05);
+  }
+}
+
+/* BALL OF BACK CONTAINER MY LOGO FOR HOME */
+
+.ballsBackContainerFront {
+  position: absolute;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.ballsBackContainerFront:nth-child(1) {
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  backdrop-filter: blur(10px) saturate(170%);
+  -webkit-backdrop-filter: blur(10px) saturate(170%);
+  background-color: rgba(130, 87, 230, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  animation: animationBallsBackContainerHome1 5s ease infinite alternate;
+}
+
+.ballsBackContainerFront:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  border-radius: 65px 65px 90px 200px;
+  backdrop-filter: blur(5px) saturate(170%);
+  -webkit-backdrop-filter: blur(5px) saturate(170%);
+  background-color: #1573b714;
+  border: 1px solid hsla(0, 0%, 100%, 0.125);
+  animation: animationBallsBackContainerHome2 6s ease infinite alternate;
+}
+
+.ballsBackContainerFront:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  border-left: 40px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #1574b774;
+  animation: animationBallsBackContainerHome3 6s ease infinite alternate;
+}
+
+@keyframes animationBallsBackContainerHome1 {
+  to {
+    transform: translateY(-30px);
+    border-radius: 10px 3px 0 50px;
+  }
+}
+
+@keyframes animationBallsBackContainerHome2 {
+  to {
+    border-radius: 100%;
+    transform: translateX(-20px) rotate(360deg);
+  }
+}
+
+@keyframes animationBallsBackContainerHome3 {
+  to {
+    border-left: 40px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #1574b774;
+    transform: translate(20px, -20px) rotate(360deg);
+  }
 }
 
 /* CONFIGS PARA O CONTAINER DOS TEXTOS */
