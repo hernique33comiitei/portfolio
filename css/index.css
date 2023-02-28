@@ -305,6 +305,8 @@ body {
 .container__habilidades {
   grid-area: habilit;
   min-height: 700px;
+  padding: 50px 0;
+  gap: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
