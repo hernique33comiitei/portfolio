@@ -26,6 +26,8 @@
   --python: #407eaf;
   --django: #f5f5f5;
   --mysql: #00618a;
+  --typescript: #007acc;
+  --nodejs: #83cd29;
 }
 
 html {

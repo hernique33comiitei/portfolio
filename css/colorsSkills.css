@@ -55,3 +55,19 @@
 .mysql::after {
   background-color: var(--mysql) !important;
 }
+
+.typescript:hover {
+  outline: 3px solid var(--typescript) !important;
+}
+
+.typescript::after {
+  background-color: var(--typescript) !important;
+}
+
+.nodejs:hover {
+  outline: 3px solid var(--nodejs) !important;
+}
+
+.nodejs::after {
+  background-color: var(--nodejs);
+}
